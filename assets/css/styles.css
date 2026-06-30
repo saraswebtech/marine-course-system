@@ -21379,7 +21379,7 @@ span.transparent-button:hover i {
   border-bottom: 2px solid var(--color-border);
   background-color: transparent;
   resize: none;
-  min-height: 133px;
+  min-height: 90px;
 }
 .form-group span.focus-border {
   position: absolute;
