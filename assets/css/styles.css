@@ -24682,14 +24682,14 @@ only screen and (max-width: 767px) {
 
 .rbt-contact-form.contact-form-style-1 {
   padding: 50px;
-  position: relative;
+  /* position: relative; */
   z-index: 1;
-  max-width: 490px;
+  max-width: 650px;
   padding-left: 40px;
   z-index: 2;
-  background: var(--color-white);
-  box-shadow: var(--shadow-1);
-  border-radius: var(--radius);
+
+  border-radius: 10px;
+  border : 1px solid #dddddd;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
