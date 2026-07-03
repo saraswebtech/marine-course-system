@@ -12,8 +12,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 
-    <!-- CSS
-	============================================ -->
+    <!-- CSS  ============================================ -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/vendor/slick.css">
     <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
@@ -31,487 +30,6 @@
     <link rel="stylesheet" href="assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        :root {
-            --maritime-primary: #0d6efd;
-            --maritime-primary-rgb: 13, 110, 253;
-            --maritime-border-radius: 2rem;
-            --font-display: 'Outfit', sans-serif;
-            --font-body: 'Inter', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: #fafbfc;
-            color: #1e293b;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        .font-display {
-            font-family: var(--font-display);
-        }
-
-        /* Wave animation decorations */
-        .wave-icon {
-            width: 20px;
-            height: 10px;
-            stroke: var(--maritime-primary);
-            stroke-width: 2px;
-            fill: none;
-            opacity: 0.7;
-        }
-
-        /* Custom Responsive Showcase Cards */
-        .feature-card {
-            border: 1px solid rgba(30, 41, 59, 0.06);
-            border-radius: var(--maritime-border-radius);
-            padding: 2.5rem;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
-            border-color: rgba(var(--maritime-primary-rgb), 0.15);
-        }
-
-
-        /* Custom Color Background Presets */
-        .bg-card-student {
-            background-color: rgba(239, 246, 255, 0.5);
-        }
-
-        .bg-card-course {
-            background-color: rgba(236, 253, 245, 0.5);
-        }
-
-        .bg-card-exam {
-            background-color: rgba(254, 243, 199, 0.35);
-        }
-
-        .bg-card-cert {
-            background-color: rgba(250, 245, 255, 0.5);
-        }
-
-        .bg-card-branch {
-            background-color: rgba(240, 253, 250, 0.5);
-        }
-
-        .bg-card-user {
-            background-color: rgba(255, 241, 242, 0.5);
-        }
-
-        .bg-card-analytics {
-            background-color: rgba(248, 250, 252, 0.7);
-        }
-
-        /* Custom Badge styling */
-        .card-badge {
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.35rem 0.85rem;
-            border-radius: 0.5rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-        }
-
-        .badge-student {
-            background-color: #dbeafe;
-            color: #1e40af;
-        }
-
-        .badge-course {
-            background-color: #d1fae5;
-            color: #065f46;
-        }
-
-        .badge-exam {
-            background-color: #ffedd5;
-            color: #9a3412;
-        }
-
-        .badge-cert {
-            background-color: #f3e8ff;
-            color: #6b21a8;
-        }
-
-        .badge-branch {
-            background-color: #ccfbf1;
-            color: #115e59;
-        }
-
-        .badge-user {
-            background-color: #ffe4e6;
-            color: #9f1239;
-        }
-
-        .badge-analytics {
-            background-color: #e2e8f0;
-            color: #334155;
-        }
-
-        /* Feature pills */
-        .feature-pill {
-            font-size: 10px;
-            font-weight: 700;
-            padding: 0.35rem 0.75rem;
-            border-radius: 50rem;
-            display: inline-block;
-            margin-right: 0.35rem;
-            margin-bottom: 0.35rem;
-            text-transform: capitalize;
-        }
-
-        /* Sub-icons container */
-        .sub-icon-box {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 0.75rem;
-            background-color: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease;
-        }
-
-        .sub-icon-box:hover {
-            transform: scale(1.05);
-        }
-
-        /* Mockups general styling */
-        .mockup-wrapper {
-            position: relative;
-            width: 100%;
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* 01. Student Graphic Mockup */
-        .student-card-base {
-            width: 230px;
-            height: 155px;
-            background-color: #ffffff;
-            border-radius: 1.25rem;
-            padding: 1.25rem;
-            box-shadow: 0 10px 30px rgba(8, 112, 184, 0.06);
-            border: 1px solid rgba(8, 112, 184, 0.05);
-            position: relative;
-        }
-
-        .cap-shadow {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 45px;
-            height: 45px;
-            background-color: #f8fafc;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        /* 3D Floating Graduation Cap Animation */
-        .graduation-cap-svg {
-            position: absolute;
-            top: -10px;
-            right: 5px;
-            width: 80px;
-            height: 80px;
-            z-index: 2;
-            filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.12));
-            animation: float-cap 5s ease-in-out infinite;
-        }
-
-        @keyframes float-cap {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-4px) rotate(1deg);
-            }
-        }
-
-        /* Floating success check mark */
-        .badge-success-floating {
-            position: absolute;
-            bottom: -4px;
-            right: 35px;
-            width: 34px;
-            height: 34px;
-            background-color: #10b981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
-            z-index: 3;
-        }
-
-        /* 02. iMac Screen Graphic */
-        .monitor-bezel {
-            width: 210px;
-            height: 135px;
-            background-color: #1e293b;
-            border-top-left-radius: 0.75rem;
-            border-top-right-radius: 0.75rem;
-            padding: 4px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-        }
-
-        .monitor-screen {
-            width: 100%;
-            height: 100%;
-            background-color: #f8fafc;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            display: flex;
-        }
-
-        .monitor-sidebar {
-            width: 44px;
-            background-color: #0f172a;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 8px;
-            gap: 6px;
-        }
-
-        .monitor-content {
-            flex: 1;
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .monitor-chin {
-            width: 210px;
-            height: 12px;
-            background-color: #cbd5e1;
-            border-bottom-left-radius: 0.75rem;
-            border-bottom-right-radius: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-top: 1px solid rgba(0, 0, 0, 0.15);
-        }
-
-        .monitor-stand-neck {
-            width: 36px;
-            height: 25px;
-            background-color: #94a3b8;
-        }
-
-        .monitor-stand-base {
-            width: 76px;
-            height: 4px;
-            background-color: #64748b;
-            border-radius: 50rem;
-        }
-
-        /* Floating calendar overlay */
-        .calendar-floating {
-            position: absolute;
-            bottom: 24px;
-            right: 15px;
-            width: 78px;
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            animation: float-cal 4.5s ease-in-out infinite;
-        }
-
-        @keyframes float-cal {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-4px);
-            }
-        }
-
-        /* 03. Laptop Examination */
-        .laptop-bezel {
-            width: 230px;
-            height: 140px;
-            background-color: #0f172a;
-            border-top-left-radius: 0.75rem;
-            border-top-right-radius: 0.75rem;
-            padding: 6px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .laptop-screen {
-            width: 100%;
-            height: 100%;
-            background-color: #f8fafc;
-            border-radius: 0.35rem;
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .laptop-base {
-            width: 260px;
-            height: 8px;
-            background-color: #cbd5e1;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            border-bottom: 2px solid #94a3b8;
-            display: flex;
-            justify-content: center;
-        }
-
-        .laptop-trackpad {
-            width: 50px;
-            height: 4px;
-            background-color: rgba(0, 0, 0, 0.08);
-            border-bottom-left-radius: 2px;
-            border-bottom-right-radius: 2px;
-        }
-
-        /* Option Items in Exam */
-        .exam-option {
-            border: 1px solid #e2e8f0;
-            border-radius: 0.35rem;
-            background-color: #ffffff;
-            padding: 3px 6px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 6px;
-            font-weight: 500;
-            color: #475569;
-        }
-
-        .exam-option.active {
-            background-color: #eff6ff;
-            border-color: #60a5fa;
-            color: #1e3a8a;
-        }
-
-        /* 04. Certificate Frame */
-        .certificate-frame {
-            width: 240px;
-            height: 165px;
-            background-color: #ffffff;
-            border-radius: 0.5rem;
-            padding: 10px;
-            box-shadow: 0 15px 35px rgba(147, 51, 234, 0.06);
-            border: 4px double #1e3a8a;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            position: relative;
-        }
-
-        /* 05. Branch Network Nodes */
-        .node-connector {
-            position: absolute;
-            width: 220px;
-            height: 180px;
-            z-index: 0;
-        }
-
-        .branch-node {
-            position: relative;
-            z-index: 1;
-            transition: transform 0.2s ease;
-        }
-
-        .branch-node:hover {
-            transform: scale(1.08);
-        }
-
-        /* 07. Charts & Analytics Mockup */
-        .analytics-card-base {
-            width: 230px;
-            height: 160px;
-            background-color: #ffffff;
-            border-radius: 1.25rem;
-            padding: 0.85rem;
-            box-shadow: 0 15px 35px rgba(30, 41, 59, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .bar-chart-container {
-            display: flex;
-            align-items: flex-end;
-            gap: 6px;
-            height: 60px;
-            background-color: rgba(248, 250, 252, 0.6);
-            padding: 6px;
-            border-radius: 0.5rem;
-            border: 1px solid #f1f5f9;
-        }
-
-        .bar-column {
-            flex: 1;
-            border-top-left-radius: 2px;
-            border-top-right-radius: 2px;
-            animation: stretch-bar 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes stretch-bar {
-            0% {
-                transform: scaleY(0.7);
-            }
-
-            100% {
-                transform: scaleY(1);
-            }
-        }
-
-        /* Bottom stats icon boxes */
-        .footer-stat-icon-box {
-            width: 3.25rem;
-            height: 3.25rem;
-            border-radius: 50%;
-            background-color: var(--maritime-primary);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 16px rgba(var(--maritime-primary-rgb), 0.15);
-            flex-shrink: 0;
-        }
-    </style>
 </head>
 
 <body class="rbt-header-sticky">
@@ -548,8 +66,7 @@
                                         price. Get Histudy for Big Sale -95% off.</span>
                                 </div>
                                 <div class="right-button">
-                                    <a class="rbt-btn-link color-white"
-                                        href="https://themeforest.net/checkout/from_item/42846507?license=regular">
+                                    <a class="rbt-btn-link color-white" href="#">
                                         <span>Purchase Now <i class="feather-arrow-right"></i></span>
                                     </a>
                                 </div>
@@ -938,17 +455,14 @@
     <section class="py-5 overflow-hidden" id="features">
         <div class="container py-4">
 
-            <!-- --- SECTION HEADER --- -->
-
-
             <!-- --- GRID CARDS LAYOUT --- -->
             <div class="row g-4 mb-5">
 
                 <!-- 01. Student Management Card -->
                 <div class="col-12 col-lg-6">
                     <div class="feature-card bg-card-student">
-                        <div class="row align-items-center g-4 h-100">
-                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between h-100">
+                        <div class="row align-items-center g-4 ">
+                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
                                 <div>
                                     <span class="card-badge badge-student">01</span>
                                     <h3 class="fw-bold text-dark h4 mb-3">Student Management</h3>
@@ -957,116 +471,47 @@
                                         in one secure system.
                                     </p>
                                 </div>
-
-                                <!-- Sub icons -->
-                                <div class="d-flex align-items-center gap-2 mt-auto">
-                                    <div class="sub-icon-box text-primary">
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                                            viewBox="0 0 24 24">
-                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="9" cy="7" r="4"></circle>
-                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="sub-icon-box text-info">
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                                            viewBox="0 0 24 24">
-                                            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-                                            <line x1="7" x2="17" y1="8" y2="8"></line>
-                                            <line x1="7" x2="17" y1="12" y2="12"></line>
-                                            <line x1="7" x2="13" y1="16" y2="16"></line>
-                                        </svg>
-                                    </div>
-                                    <div class="sub-icon-box text-success">
-                                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                                            viewBox="0 0 24 24">
-                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
-                                        </svg>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="mockup-wrapper">
-                                    <div class="absolute inset-0 rounded-circle"
-                                        style="background: radial-gradient(circle, rgba(13,110,253,0.06) 0%, transparent 70%);">
-                                    </div>
-
-                                    <div class="student-card-base">
-                                        <div class="cap-shadow"></div>
-
-                                        <!-- SVG Graduation Cap -->
-                                        <svg class="graduation-cap-svg" viewBox="0 0 100 100">
-                                            <path
-                                                d="M25 55C25 55 25 68 50 68C75 68 75 55 75 55V48C75 48 68 52 50 52C32 52 25 48 25 48V55Z"
-                                                fill="#1e293b" />
-                                            <path d="M25 51.5C25 51.5 25 58 50 58C75 58 75 51.5 75 51.5"
-                                                stroke="#334155" stroke-width="1.5" />
-                                            <path d="M50 24L88 38L50 52L12 38L50 24Z" fill="#0f172a" />
-                                            <path d="M50 24L88 38L50 52L12 38L50 24Z" stroke="#334155"
-                                                stroke-width="1.5" />
-                                            <circle cx="50" cy="38" r="3" fill="#eab308" />
-                                            <path d="M50 38C52 42 63 46 64.5 49.5C65.5 52 65 57 65 57" stroke="#eab308"
-                                                stroke-width="2" stroke-linecap="round" />
-                                            <path d="M63 56H67V61L65 63L63 61V56Z" fill="#f59e0b" />
-                                        </svg>
-
-                                        <!-- Content lines -->
-                                        <div class="d-flex align-items-center gap-2 mb-3">
-                                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center text-white"
-                                                style="width: 32px; height: 32px;">
-                                                <svg width="14" height="14" fill="none" stroke="currentColor"
-                                                    stroke-width="2.5" viewBox="0 0 24 24">
-                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                                    <circle cx="12" cy="7" r="4"></circle>
-                                                </svg>
-                                            </div>
-                                            <div style="flex: 1;">
-                                                <div class="bg-light-subtle rounded"
-                                                    style="width: 70px; height: 10px; background-color: #e2e8f0;">
-                                                </div>
-                                                <div class="bg-light-subtle rounded mt-1"
-                                                    style="width: 45px; height: 6px; background-color: #f1f5f9;">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div style="gap: 6px; display: flex; flex-direction: column;">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <svg width="12" height="12" class="text-primary" fill="none"
-                                                    stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <div class="bg-light-subtle rounded"
-                                                    style="width: 100px; height: 6px; background-color: #f1f5f9;">
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-center gap-2">
-                                                <svg width="12" height="12" class="text-primary" fill="none"
-                                                    stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <div class="bg-light-subtle rounded"
-                                                    style="width: 110px; height: 6px; background-color: #f1f5f9;">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Floating success badge -->
-                                        <div class="badge-success-floating">
-                                            <svg width="18" height="18" fill="none" stroke="currentColor"
-                                                stroke-width="3" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
-                                                </path>
-                                            </svg>
-                                        </div>
+                                    <!-- iMac Frame Mockup -->
+                                    <div class="d-flex flex-column align-items-center">
+                                        <img src="assets/image/student.png" alt="Course Schedule"
+                                            class="w-100 h-100 object-fit-cover">
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Sub icons -->
+                            <div class="d-flex flex-wrap gap-1 mt-auto">
+                                <div class="sub-icon-box text-primary">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="sub-icon-box text-info">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                                        <line x1="7" x2="17" y1="8" y2="8"></line>
+                                        <line x1="7" x2="17" y1="12" y2="12"></line>
+                                        <line x1="7" x2="13" y1="16" y2="16"></line>
+                                    </svg>
+                                </div>
+                                <div class="sub-icon-box text-success">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1074,8 +519,8 @@
                 <!-- 02. Course Management Card -->
                 <div class="col-12 col-lg-6">
                     <div class="feature-card bg-card-course">
-                        <div class="row align-items-center g-4 h-100">
-                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between h-100">
+                        <div class="row align-items-center g-4 ">
+                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between ">
                                 <div>
                                     <span class="card-badge badge-course">02</span>
                                     <h3 class="fw-bold text-dark h4 mb-3">Course Management</h3>
@@ -1085,136 +530,28 @@
                                     </p>
                                 </div>
 
-                                <!-- Pills tags -->
-                                <div class="d-flex flex-wrap gap-1 mt-auto">
-                                    <span class="feature-pill badge-course">Course Creation</span>
-                                    <span class="feature-pill badge-student">Batch Management</span>
-                                    <span class="feature-pill badge-exam"
-                                        style="background-color: #fef3c7; color: #b45309;">Schedules</span>
-                                    <span class="feature-pill badge-cert">Curriculum</span>
-                                    <span class="feature-pill badge-student"
-                                        style="background-color: #e0f2fe; color: #0369a1;">Training Calendar</span>
-                                </div>
+
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="mockup-wrapper">
                                     <!-- iMac Frame Mockup -->
                                     <div class="d-flex flex-column align-items-center">
-                                        <div class="monitor-bezel">
-                                            <div class="monitor-screen">
-
-                                                <!-- Mini screen sidebar -->
-                                                <div class="monitor-sidebar">
-                                                    <div class="rounded-pill bg-secondary opacity-25"
-                                                        style="width: 25px; height: 5px;"></div>
-                                                    <div class="rounded bg-primary d-flex align-items-center justify-content-center text-white"
-                                                        style="width: 28px; height: 16px;">
-                                                        <svg width="10" height="10" fill="none" stroke="currentColor"
-                                                            stroke-width="2" viewBox="0 0 24 24">
-                                                            <path d="M2 17l10-5 10 5M2 12l10-5 10 5M2 7l10-5 10 5">
-                                                            </path>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="rounded bg-dark d-flex align-items-center justify-content-center text-info"
-                                                        style="width: 28px; height: 16px;">
-                                                        <svg width="10" height="10" fill="none" stroke="currentColor"
-                                                            stroke-width="2" viewBox="0 0 24 24">
-                                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z">
-                                                            </path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Mini screen main content -->
-                                                <div class="monitor-content">
-                                                    <div class="d-flex justify-content-between align-items-center pb-1 border-bottom"
-                                                        style="font-size: 8px;">
-                                                        <span class="fw-bold text-dark">Courses</span>
-                                                        <div class="bg-secondary opacity-25 rounded-pill"
-                                                            style="width: 25px; height: 5px;"></div>
-                                                    </div>
-
-                                                    <!-- Courses -->
-                                                    <div class="my-1"
-                                                        style="gap: 4px; display: flex; flex-direction: column;">
-                                                        <div class="bg-white p-1 rounded border"
-                                                            style="font-size: 6px;">
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center mb-1">
-                                                                <span class="fw-semibold text-dark">Navigation
-                                                                    L1</span>
-                                                                <span class="text-success fw-bold">85%</span>
-                                                            </div>
-                                                            <div class="progress" style="height: 3px;">
-                                                                <div class="progress-bar bg-success"
-                                                                    style="width: 85%;"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="bg-white p-1 rounded border"
-                                                            style="font-size: 6px;">
-                                                            <div
-                                                                class="d-flex justify-content-between align-items-center mb-1">
-                                                                <span class="fw-semibold text-dark">Safety
-                                                                    Rescue</span>
-                                                                <span class="text-primary fw-bold">40%</span>
-                                                            </div>
-                                                            <div class="progress" style="height: 3px;">
-                                                                <div class="progress-bar bg-primary"
-                                                                    style="width: 40%;"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="d-flex justify-content-end gap-1">
-                                                        <div class="bg-secondary opacity-25 rounded"
-                                                            style="width: 20px; height: 7px;"></div>
-                                                        <div class="bg-dark rounded" style="width: 20px; height: 7px;">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <!-- Stand parts -->
-                                        <div class="monitor-chin">
-                                            <div class="bg-dark opacity-25 rounded-pill"
-                                                style="width: 25px; height: 4px;"></div>
-                                        </div>
-                                        <div class="monitor-stand-neck"></div>
-                                        <div class="monitor-stand-base"></div>
-                                    </div>
-
-                                    <!-- Floating calendar sheet -->
-                                    <div class="calendar-floating">
-                                        <div class="bg-primary p-1 text-white d-flex justify-content-between align-items-center"
-                                            style="font-size: 6px;">
-                                            <span class="fw-bold">Schedules</span>
-                                            <svg width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"
-                                                viewBox="0 0 24 24">
-                                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
-                                                <line x1="16" x2="16" y1="2" y2="6"></line>
-                                                <line x1="8" x2="8" y1="2" y2="6"></line>
-                                                <line x1="3" x2="21" y1="10" y2="10"></line>
-                                            </svg>
-                                        </div>
-                                        <div class="p-1 bg-white"
-                                            style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; font-size: 5px; text-align: center;">
-                                            <span class="text-muted fw-bold">M</span>
-                                            <span class="text-muted fw-bold">T</span>
-                                            <span class="text-muted fw-bold">W</span>
-                                            <span class="text-muted fw-bold">T</span>
-                                            <span class="text-muted fw-bold">F</span>
-                                            <span class="text-secondary">1</span>
-                                            <span class="text-secondary">2</span>
-                                            <span
-                                                class="text-primary fw-bold rounded-sm bg-primary bg-opacity-10">3</span>
-                                            <span class="text-secondary">4</span>
-                                            <span class="text-secondary">5</span>
-                                        </div>
+                                        <img src="assets/image/computer.png" alt="Course Schedule"
+                                            class="w-100 h-100 object-fit-cover">
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Pills tags -->
+                            <div class="d-flex flex-wrap gap-1 ">
+                                <span class="feature-pill badge-course">Course Creation</span>
+                                <span class="feature-pill badge-student">Batch Management</span>
+                                <span class="feature-pill badge-exam"
+                                    style="background-color: #fef3c7; color: #b45309;">Schedules</span>
+                                <span class="feature-pill badge-cert">Curriculum</span>
+                                <span class="feature-pill badge-student"
+                                    style="background-color: #e0f2fe; color: #0369a1;">Training Calendar</span>
                             </div>
                         </div>
                     </div>
@@ -1227,8 +564,8 @@
                 <!-- 03. Online Examination Card -->
                 <div class="col-12 col-lg-6">
                     <div class="feature-card bg-card-exam">
-                        <div class="row align-items-center g-4 h-100">
-                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between h-100">
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between ">
                                 <div>
                                     <span class="card-badge badge-exam">03</span>
                                     <h3 class="fw-bold text-dark h4 mb-3">Online Examination</h3>
@@ -1238,78 +575,27 @@
                                     </p>
                                 </div>
 
-                                <!-- MCQ Pills -->
-                                <div class="d-flex flex-wrap gap-1 mt-auto">
-                                    <span class="feature-pill badge-exam">MCQ Exams</span>
-                                    <span class="feature-pill badge-student"
-                                        style="background-color: #fef3c7; color: #b45309;">Timed Exams</span>
-                                    <span class="feature-pill badge-course">Auto Evaluation</span>
-                                    <span class="feature-pill badge-cert">Result Publishing</span>
-                                    <span class="feature-pill badge-student">Question Bank</span>
-                                </div>
+
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="mockup-wrapper">
+                                    <!-- iMac Frame Mockup -->
                                     <div class="d-flex flex-column align-items-center">
-                                        <!-- Laptop Screen -->
-                                        <div class="laptop-bezel">
-                                            <div class="laptop-screen">
-                                                <div class="d-flex justify-content-between align-items-center pb-1 border-bottom"
-                                                    style="font-size: 8px;">
-                                                    <span class="fw-bold text-dark">Online Exam</span>
-                                                    <span class="badge bg-warning text-dark py-1 px-1.5 font-monospace"
-                                                        style="font-size: 6px;">00:45:30</span>
-                                                </div>
-
-                                                <div class="my-1.5"
-                                                    style="gap: 3px; display: flex; flex-direction: column;">
-                                                    <div class="bg-secondary opacity-25 rounded-pill"
-                                                        style="width: 100px; height: 5px;"></div>
-                                                    <div class="bg-secondary opacity-15 rounded-pill"
-                                                        style="width: 70px; height: 4px;"></div>
-                                                </div>
-
-                                                <!-- MCQ option list -->
-                                                <div style="gap: 3px; display: flex; flex-direction: column;">
-                                                    <div class="exam-option">
-                                                        <span class="d-flex align-items-center gap-1">
-                                                            <span
-                                                                class="rounded-circle bg-light d-flex align-items-center justify-content-center border"
-                                                                style="width:10px; height:10px;">A</span>
-                                                            <span>Option selection label</span>
-                                                        </span>
-                                                    </div>
-                                                    <div class="exam-option active">
-                                                        <span class="d-flex align-items-center gap-1">
-                                                            <span
-                                                                class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
-                                                                style="width:10px; height:10px;">B</span>
-                                                            <span>Correct answer verification</span>
-                                                        </span>
-                                                        <svg width="8" height="8" class="text-primary" fill="none"
-                                                            stroke="currentColor" stroke-width="4" viewBox="0 0 24 24">
-                                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                                d="M5 13l4 4L19 7"></path>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="exam-option">
-                                                        <span class="d-flex align-items-center gap-1">
-                                                            <span
-                                                                class="rounded-circle bg-light d-flex align-items-center justify-content-center border"
-                                                                style="width:10px; height:10px;">C</span>
-                                                            <span>Secondary answer label</span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Laptop base -->
-                                        <div class="laptop-base">
-                                            <div class="laptop-trackpad"></div>
-                                        </div>
+                                        <img src="assets/image/laptop.png" alt="Course Schedule"
+                                            class="w-100 h-100 object-fit-cover">
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- MCQ Pills -->
+                            <div class="d-flex flex-wrap gap-1 mt-auto">
+                                <span class="feature-pill badge-exam">MCQ Exams</span>
+                                <span class="feature-pill badge-student"
+                                    style="background-color: #fef3c7; color: #b45309;">Timed Exams</span>
+                                <span class="feature-pill badge-course">Auto Evaluation</span>
+                                <span class="feature-pill badge-cert">Result Publishing</span>
+                                <span class="feature-pill badge-student">Question Bank</span>
                             </div>
                         </div>
                     </div>
@@ -1318,8 +604,8 @@
                 <!-- 04. Certificate Generator Card -->
                 <div class="col-12 col-lg-6">
                     <div class="feature-card bg-card-cert">
-                        <div class="row align-items-center g-4 h-100">
-                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between h-100">
+                        <div class="row align-items-center g-4">
+                            <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
                                 <div>
                                     <span class="card-badge badge-cert">04</span>
                                     <h3 class="fw-bold text-dark h4 mb-3">Certificate Generator</h3>
@@ -1329,84 +615,26 @@
                                     </p>
                                 </div>
 
-                                <!-- Tags -->
-                                <div class="d-flex flex-wrap gap-1 mt-auto">
-                                    <span class="feature-pill badge-cert">Auto Generation</span>
-                                    <span class="feature-pill badge-student">QR Verification</span>
-                                    <span class="feature-pill badge-course">Digital Sign</span>
-                                    <span class="feature-pill badge-exam"
-                                        style="background-color: #fef3c7; color: #b45309;">PDF Download</span>
-                                    <span class="feature-pill badge-user">Certificate Templates</span>
-                                </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="mockup-wrapper">
-                                    <div class="certificate-frame">
-                                        <div
-                                            style="font-size: 9px; font-weight: 800; color: #1e3a8a; text-transform: uppercase; letter-spacing: 1px;">
-                                            Certificate
-                                            <div
-                                                style="font-size: 5px; font-weight: 600; color: #64748b; letter-spacing: 2px;">
-                                                of Completion</div>
-                                        </div>
-
-                                        <div class="text-muted" style="font-size: 4.5px; font-style: italic;">This
-                                            is to certify that</div>
-
-                                        <div>
-                                            <div
-                                                style="font-size: 11px; font-weight: 700; color: #1e3a8a; font-family: serif; font-style: italic;">
-                                                Arjun Sharma</div>
-                                            <div class="mx-auto bg-primary opacity-25"
-                                                style="width: 50px; height: 1px; margin-top: 2px;"></div>
-                                        </div>
-
-                                        <div style="font-size: 5px; color: #64748b;">
-                                            has successfully completed the training course
-                                            <div class="fw-bold text-dark" style="font-size: 6.5px; margin-top: 1px;">
-                                                Basic Safety Training
-                                                (BST)</div>
-                                        </div>
-
-                                        <!-- Footer block signature/seal -->
-                                        <div class="d-flex justify-content-between align-items-end mt-1"
-                                            style="font-size: 4px;">
-                                            <div class="text-center" style="width: 40px;">
-                                                <svg viewBox="0 0 50 15" width="30" height="10" class="text-secondary">
-                                                    <path d="M5 10C12 2 15 14 20 8C25 2 28 12 35 6" fill="none"
-                                                        stroke="currentColor" stroke-width="1" />
-                                                </svg>
-                                                <div class="bg-secondary opacity-25" style="height: 1px;"></div>
-                                                <span
-                                                    style="font-size: 3.5px; text-transform: uppercase;">Authorized</span>
-                                            </div>
-
-                                            <!-- Gold badge seal -->
-                                            <div class="position-relative d-flex align-items-center justify-content-center"
-                                                style="width: 20px; height: 20px;">
-                                                <div class="position-absolute bg-warning rounded-circle border border-white"
-                                                    style="width: 18px; height: 18px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                                </div>
-                                                <svg width="10" height="10" class="text-white position-relative"
-                                                    fill="none" stroke="currentColor" stroke-width="3"
-                                                    viewBox="0 0 24 24">
-                                                    <path
-                                                        d="M12 15l-2 5 2-1 2 1-2-5zm0-10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-
-                                            <!-- Mini QR code representation -->
-                                            <div class="p-0.5 bg-light border rounded">
-                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path
-                                                        d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm13-2h3v2h-3zm1 3h2v2h-2zm-2 2h2v2h-2zm4-2h1v1h-1zm-1-1h1v1h-1zm-1 3h1v1h-1z" />
-                                                </svg>
-                                            </div>
-                                        </div>
+                                    <!-- iMac Frame Mockup -->
+                                    <div class="d-flex flex-column align-items-center">
+                                        <img src="assets/image/certificate.png" alt="Course Schedule"
+                                            class="w-100 h-100 object-fit-cover">
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="d-flex flex-wrap gap-1 mt-auto">
+                                <span class="feature-pill badge-cert">Auto Generation</span>
+                                <span class="feature-pill badge-student">QR Verification</span>
+                                <span class="feature-pill badge-course">Digital Sign</span>
+                                <span class="feature-pill badge-exam"
+                                    style="background-color: #fef3c7; color: #b45309;">PDF Download</span>
+                                <span class="feature-pill badge-user">Certificate Templates</span>
                             </div>
                         </div>
                     </div>
@@ -1428,51 +656,15 @@
                             </p>
                         </div>
 
-                        <!-- Graphical Node map mockup -->
-                        <div class="mockup-wrapper my-3">
-                            <svg class="node-connector" style="left:45%; top:56%; transform: translate(-50%, -50%);">
-                                <path d="M 110 40 L 50 120" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="3 3"
-                                    fill="none" />
-                                <path d="M 110 40 L 110 120" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="3 3"
-                                    fill="none" />
-                                <path d="M 110 40 L 170 120" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="3 3"
-                                    fill="none" />
-                            </svg>
-
-                            <!-- HQ Node -->
-                            <div class="branch-node rounded-circle bg-teal d-flex align-items-center justify-content-center text-white border border-white border-2 shadow-lg position-absolute"
-                                style="width: 44px; height: 44px; top: 18px; left: 145px; background-color: #14b8a6;">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24">
-                                    <path d="M3 21h18M3 10h18M5 10V21M19 10V21M12 10V21M12 3L3 10h18z"></path>
-                                </svg>
-                            </div>
-
-                            <!-- Sub nodes -->
-                            <div class="branch-node rounded-circle bg-white d-flex align-items-center justify-content-center text-teal border shadow-sm position-absolute"
-                                style="width: 32px; height: 32px; bottom: 35px; right: 124px; color: #14b8a6;">
-                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2a10 10 0 0 0-10 10c0 5.25 10 10 10 10s10-4.75 10-10A10 10 0 0 0 12 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="branch-node rounded-circle bg-white d-flex align-items-center justify-content-center text-teal border shadow-sm position-absolute"
-                                style="width: 32px; height: 32px; bottom: 35px; left: 94px; color: #14b8a6;">
-                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24">
-                                    <path d="M3 21h18M3 10h18M5 10V21M19 10V21M12 10V21M12 3L3 10h18z"></path>
-                                </svg>
-                            </div>
-                            <div class="branch-node rounded-circle bg-white d-flex align-items-center justify-content-center text-teal border shadow-sm position-absolute"
-                                style="width: 32px; height: 32px; bottom: 35px; left: 154px; color: #14b8a6;">
-                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24">
-                                    <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9z"></path>
-                                </svg>
+                        <!-- Graphic User Role shield mockup -->
+                        <div class="mockup-wrapper">
+                            <!-- iMac Frame Mockup -->
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/image/chart-1.png" alt="Course Schedule"
+                                    class="w-100 h-100 object-fit-cover">
                             </div>
                         </div>
+
 
                         <!-- Sub labels -->
                         <div class="d-flex flex-wrap gap-1 mt-auto">
@@ -1496,49 +688,11 @@
                         </div>
 
                         <!-- Graphic User Role shield mockup -->
-                        <div class="mockup-wrapper my-3">
-                            <svg class="node-connector" style="left:50%; top:52%; transform: translate(-50%, -50%);">
-                                <path d="M 110 45 L 50 120" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="2 2"
-                                    fill="none" />
-                                <path d="M 110 45 L 110 120" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="2 2"
-                                    fill="none" />
-                                <path d="M 110 45 L 170 120" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="2 2"
-                                    fill="none" />
-                            </svg>
-
-                            <!-- Core shield -->
-                            <div class="branch-node rounded-3 bg-primary d-flex align-items-center justify-content-center text-white shadow-lg position-absolute"
-                                style="width: 48px; height: 48px; top: 16px; left: 160px;">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-
-                            <!-- Sub User roles -->
-                            <div class="branch-node rounded-circle bg-danger d-flex align-items-center justify-content-center text-white border border-white border-2 shadow-sm position-absolute"
-                                style="width: 28px; height: 28px; bottom: 35px; left: 95px;">
-                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
-                                    viewBox="0 0 24 24">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                            </div>
-                            <div class="branch-node rounded-circle bg-warning d-flex align-items-center justify-content-center text-white border border-white border-2 shadow-sm position-absolute"
-                                style="width: 28px; height: 28px; bottom: 35px; right: 89px;">
-                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
-                                    viewBox="0 0 24 24">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
-                            </div>
-                            <div class="branch-node rounded-circle bg-success d-flex align-items-center justify-content-center text-white border border-white border-2 shadow-sm position-absolute"
-                                style="width: 28px; height: 28px; bottom: 35px; left: 174px;">
-                                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
-                                    viewBox="0 0 24 24">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
+                        <div class="mockup-wrapper">
+                            <!-- iMac Frame Mockup -->
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/image/chart-2.png" alt="Course Schedule"
+                                    class="w-100 h-100 object-fit-cover">
                             </div>
                         </div>
 
@@ -1565,7 +719,7 @@
                         </div>
 
                         <!-- Visual Dynamic Chart Mockup -->
-                        <div class="mockup-wrapper my-2">
+                        <div class="mockup-wrapper">
                             <div class="analytics-card-base">
                                 <div class="d-flex justify-content-between align-items-center pb-1 border-bottom"
                                     style="font-size: 8px;">
@@ -1630,62 +784,54 @@
 
             </div>
 
-
-
-
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
 
     <!-- Start Certification Area -->
     <div class="rbt-banner-area rbt-banner-7 theme-shape header-transperent-spacer" id="certification">
         <div class="wrapper w-100">
             <div class="container">
-                <div class="row g-5 justify-content-between align-items-center">
-                    <div class="col-lg-5 order-lg-1">
-                        <div class="content">
-                            <div class="inner">
-                                <div class="section-title text-start">
-                                    <span class="subtitle bg-primary-opacity">Certificate Generation</span>
-                                </div>
-                                <h3 class="title">Digital <span class="theme-gradient">Certificate <br>Generation</span>
-                                    with QR Code</h3>
-                                <p class="mt--20">Generate secure,verifiable certificates with unique QR code. Instantly
-                                    shareable and easy to validate online.</p>
+                <div class="certification-wrapper">
+                    <div class="row g-5 justify-content-between align-items-center">
 
-                                <div class="rbt-button-group justify-content-start mt--30">
-                                    <a class="rbt-btn btn-border rbt-switch-btn" href="#">
-                                        <span data-text="Find Courses">Find Courses</span>
-                                    </a>
+                        <div class="col-lg-5 order-lg-1">
+                            <div class="content">
+                                <div class="inner">
+                                    <div class="section-title text-start">
+                                        <span class="subtitle bg-primary-opacity">Certificate Generation</span>
+                                    </div>
+                                    <h3 class="title">Digital <span class="theme-gradient">Certificate
+                                            <br>Generation</span>
+                                        with QR Code</h3>
+                                    <p class="mt--20">Generate secure,verifiable certificates with unique QR code.
+                                        Instantly
+                                        shareable and easy to validate online.</p>
+
+                                    <div class="rbt-button-group justify-content-start mt--30">
+                                        <a class="rbt-btn btn-border rbt-switch-btn" href="#">
+                                            <span data-text="Find Courses">Find Courses</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-7 order-1 order-lg-2">
-                        <div class="row g-3 align-items-center">
+                        <div class="col-lg-7 order-1 order-lg-2">
+                            <div class="row g-3 align-items-center">
 
-                            <div class="col-5 col-md-6">
-                                <img src="assets/images/course/single-course-06.jpg" class="img-fluid rounded w-100"
-                                    alt="Education Images">
+                                <div class="col-12 col-md-6">
+                                    <img src="assets/images/course/single-course-06.jpg" class="img-fluid rounded w-100"
+                                        alt="Education Images">
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <video autoplay loop muted playsinline class="img-fluid rounded w-100"
+                                        style="object-fit: cover;">
+                                        <source src="assets/videos/scan.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
                             </div>
-
-                            <div class="col-5 col-md-6">
-                                <video autoplay loop muted playsinline class="img-fluid rounded w-100"
-                                    style="object-fit: cover;">
-                                    <source src="assets/videos/scan.mp4" type="video/mp4">
-                                </video>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -1698,97 +844,94 @@
     <div class="rbt-banner-area rbt-banner-3 header-transperent-spacer" id="contact">
         <div class="wrapper">
             <div class="container">
-                <div class="row align-items-center">
+                <div class=" row justify-content-center align-items-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="contact-wrapper">
+                            <div class="rbt-contact-form contact-form-style-1">
+                                <h3 class="title">Schedule A Free Live Demo Today</h3>
 
-                    <div class="col-12 col-lg-7">
-                        <div class="rbt-contact-form contact-form-style-1">
-                            <h3 class="title">Schedule A Free Live Demo Today</h3>
+                                <form id="contact-form" action="contact.php" method="POST">
 
-                            <form id="contact-form" action="contact.php" method="POST">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="form-group">
+                                                <input type="text" name="first_name" placeholder=" " required>
+                                                <label>First Name</label>
+                                                <span class="focus-border">
 
-                                <div class="row">
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="form-group">
-                                            <input type="text" name="first_name" placeholder=" " required>
-                                            <label>First Name</label>
-                                            <span class="focus-border"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="form-group">
+                                                <input type="text" name="last_name" placeholder=" " required>
+                                                <label>Last Name</label>
+                                                <span class="focus-border"></span>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="form-group">
-                                            <input type="text" name="last_name" placeholder=" " required>
-                                            <label>Last Name</label>
-                                            <span class="focus-border"></span>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="form-group">
+                                                <input type="email" name="con_email" placeholder=" " required>
+                                                <label>Email</label>
+                                                <span class="focus-border"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="form-group">
+                                                <input type="tel" name="con_phone" placeholder=" " required>
+                                                <label>Phone</label>
+                                                <span class="focus-border"></span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="form-group">
-                                            <input type="email" name="con_email" placeholder=" " required>
-                                            <label>Email</label>
-                                            <span class="focus-border"></span>
+                                    <div class="form-group mb-3">
+                                        <textarea name="con_message" placeholder=" " required></textarea>
+                                        <label>Message</label>
+                                        <span class="focus-border"></span>
+                                    </div>
+                                    <label>
+                                        How many letters does "<strong>Marine</strong>" have?
+                                    </label>
+                                    <div class="form-group">
+                                        <div class="rbt-modern-select bg-transparent height-45">
+                                            <select id="captcha" class="w-100" name="captcha" required>
+                                                <option value="" selected disabled>Select Answer</option>
+                                                <option value="4">4</option>
+                                                <option value="8">8</option>
+                                                <option value="6">6</option>
+                                                <option value="3">3</option>
+                                            </select>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="form-group">
-                                            <input type="tel" name="con_phone" placeholder=" " required>
-                                            <label>Phone</label>
-                                            <span class="focus-border"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <textarea name="con_message" placeholder=" " required></textarea>
-                                    <label>Message</label>
-                                    <span class="focus-border"></span>
-                                </div>
-                                <label>
-                                    How many letters does "<strong>Marine</strong>" have?
-                                </label>
-                                <div class="form-group">
-                                    <div class="rbt-modern-select bg-transparent height-45">
-                                        <select id="captcha" class="w-100" name="captcha" required>
-                                            <option value="" selected disabled>Select Answer</option>
-                                            <option value="4">4</option>
-                                            <option value="8">8</option>
-                                            <option value="6">6</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-submit-group">
-                                    <button type="submit"
-                                        class="rbt-btn btn-md btn-gradient hover-icon-reverse radius-round w-100">
-                                        <span class="icon-reverse-wrapper">
-                                            <span class="btn-text">GET IT NOW</span>
-                                            <span class="btn-icon">
-                                                <i class="feather-arrow-right"></i>
+                                    <div class="form-submit-group">
+                                        <button type="submit"
+                                            class="rbt-btn btn-md btn-gradient hover-icon-reverse radius-round w-100">
+                                            <span class="icon-reverse-wrapper">
+                                                <span class="btn-text">Submit</span>
+                                                <span class="btn-icon">
+                                                    <i class="feather-arrow-right"></i>
+                                                </span>
+                                                <span class="btn-icon">
+                                                    <i class="feather-arrow-right"></i>
+                                                </span>
                                             </span>
-                                            <span class="btn-icon">
-                                                <i class="feather-arrow-right"></i>
-                                            </span>
-                                        </span>
-                                    </button>
-                                </div>
+                                        </button>
+                                    </div>
 
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-lg-5 text-center mt-5 mt-lg-0">
-                        <img src="assets/image/feature-7.png" class="img-fluid" alt="Feature Image">
-                    </div>
-
                 </div>
-            </div>
+            </div>̥
         </div>
-
     </div>
     <!-- End Contact Area -->
 
@@ -2001,16 +1144,16 @@
                                 <h5 class="ft-title">Features</h5>
                                 <ul class="ft-link">
                                     <li>
-                                        <a href="contact.html">Multiple Branch</a>
+                                        <a href="#features">Multiple Branch</a>
                                     </li>
                                     <li>
-                                        <a href="become-a-teacher.html">Student Management</a>
+                                        <a href="#features">Student Management</a>
                                     </li>
                                     <li>
-                                        <a href="blog.html">Online Examination</a>
+                                        <a href="#features">Online Examination</a>
                                     </li>
                                     <li>
-                                        <a href="instructor.html">Course Management</a>
+                                        <a href="#features">Course Management</a>
                                     </li>
 
                                 </ul>
@@ -2032,20 +1175,18 @@
                                             <div class="accordion-body">
                                                 <ul class="ft-link">
                                                     <li>
-                                                        <a href="contact.html">Contact Us</a>
+                                                        <a href="#features">Multiple Branch</a>
                                                     </li>
                                                     <li>
-                                                        <a href="become-a-teacher.html">Become Teacher</a>
+                                                        <a href="#features">Student Management</a>
                                                     </li>
                                                     <li>
-                                                        <a href="blog.html">Blog</a>
+                                                        <a href="#features">Online Examination</a>
                                                     </li>
                                                     <li>
-                                                        <a href="instructor.html">Instructor</a>
+                                                        <a href="#features">Course Management</a>
                                                     </li>
-                                                    <li>
-                                                        <a href="event-list.html">Events</a>
-                                                    </li>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -2062,7 +1203,7 @@
                             <div class="d-none d-lg-block">
                                 <h5 class="ft-title">Get Contact</h5>
                                 <ul class="ft-link">
-                                    <li><span>Phone:</span> <a href="#">(406) 555-0120</a></li>
+                                    <li><span>Phone:</span> <a href="tel:">(406) 555-0120</a></li>
                                     <li><span>E-mail:</span> <a href="mail:">xyz@gmail.com</span></a>
                                     </li>
                                     <li><span>Location:</span> North America, USA</li>
@@ -2095,11 +1236,9 @@
                                             data-bs-parent="#footerAccordion">
                                             <div class="accordion-body">
                                                 <ul class="ft-link">
-                                                    <li><span>Phone:</span> <a href="#">(406) 555-0120</a></li>
+                                                    <li><span>Phone:</span> <a href="tel:#">(406) 555-0120</a></li>
                                                     <li><span>E-mail:</span> <a
-                                                            href="https://rainbowit.net/cdn-cgi/l/email-protection#90f8e2d0f5e8f1fde0fcf5bef3fffd"><span
-                                                                class="__cf_email__"
-                                                                data-cfemail="7705161e1915180037120f161a071b125914181a">[email&#160;protected]</span></a>
+                                                            href="mailto:">xyz123@gmail.com</span></a>
                                                     </li>
                                                     <li><span>Location:</span> North America, USA</li>
                                                 </ul>
@@ -2139,8 +1278,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
-                    <p class="rbt-link-hover text-center text-lg-start">Copyright © 2026 <a
-                            href="https://rainbowthemes.net/">Marine Line</a> All Rights Reserved</p>
+                    <p class="rbt-link-hover text-center text-lg-start">Copyright © 2026 <a href="#">Marine Line</a>
+                        All
+                        Rights Reserved</p>
                 </div>
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
                     <ul

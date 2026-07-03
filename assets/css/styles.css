@@ -809,7 +809,7 @@ h3,
 }
 
 h4,
-.h4{
+.h4 {
   font-weight: 500;
 }
 
@@ -8697,7 +8697,7 @@ textarea:-ms-input-placeholder {
     Rbt Theme Gradient
 -------------------------------*/
 .theme-gradient {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(90deg, #505bee, #4288ef);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-background-clip: text;
@@ -15183,7 +15183,7 @@ fieldset:disabled {
 .rbt-btn.btn-gradient {
   color: var(--color-white);
   background-size: 300% 100%;
-  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-secondary), var(--color-primary));
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-primary), var(--color-secondary), var(--color-primary));
 }
 
 .rbt-btn.btn-gradient.btn-gradient-2 {
@@ -24682,14 +24682,11 @@ only screen and (max-width: 767px) {
 
 .rbt-contact-form.contact-form-style-1 {
   padding: 50px;
-  /* position: relative; */
   z-index: 1;
   max-width: 650px;
   padding-left: 40px;
   z-index: 2;
-
   border-radius: 10px;
-  border : 1px solid #dddddd;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -24800,7 +24797,7 @@ only screen and (max-width: 767px) {
 .form-group textarea {
   border: 0;
   border-bottom: 2px solid var(--color-border);
-  background-color: transparent;
+  background-color: #ffffff7a;
   padding-bottom: 8px;
   padding-top: 20px;
   border-radius: 0;
@@ -45527,74 +45524,301 @@ only screen and (max-width: 575px) {
 }
 
 
-/* features */
+/* ==========================
+   FEATURE CARD
+========================== */
 
-.bg-lightbrown2 {
-  background-color: #f1ede7 !important;
-}
-
-.bg-gradient-lime-green {
-  background: linear-gradient(to bottom, #b8fb04, #91ffae);
-}
-
-.bg-gradient-cyan-blue {
-  background: linear-gradient(to bottom, #98fcff, #d7e0ff);
-}
-
-.bg-gradient-orange-yellow {
-  background: linear-gradient(to bottom, #ffed63, #ffcc91);
-}
-
-.bg-cyan {
-  background-color: #0dcaf0 !important;
+.feature-card {
+  border: 1px solid rgba(30, 41, 59, .06);
+  border-radius: 32px;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .35s;
+  /* overflow: hidden; */
 }
 
 
-.bg-light2 {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light2-rgb), var(--bs-bg-opacity)) !important;
+/* ==========================
+   BACKGROUNDS
+========================== */
+
+.bg-card-student {
+  background: #eff6ff;
+}
+
+.bg-card-course {
+  background: #ecfdf5;
+}
+
+.bg-card-exam {
+  background: #fef3c7;
+}
+
+.bg-card-cert {
+  background: #faf5ff;
+}
+
+.bg-card-branch {
+  background: #f0fdfa;
+}
+
+.bg-card-user {
+  background: #fff1f2;
+}
+
+.bg-card-analytics {
+  background: #f8fafc;
+}
+
+/* ==========================
+    CERTIFICATION WRAPPER
+========================== */
+
+.certification-wrapper {
+  background: #faf5ff;
+  border-radius: 32px;
+  padding: 40px;
+  border: 1px solid rgba(30, 41, 59, .06);
+}
+
+/* ==============  CONTACT WRAPPER  =============== */
+
+.contact-wrapper {
+  background:url(../image/bg-contact.png) ; 
+  background-size:cover;
+  border-radius: 32px;
+  padding: 40px;
+  border: 1px solid rgba(30, 41, 59, .06);
+}
+
+/* ==============  BADGES ============ */
+
+.card-badge {
+  display: inline-flex;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.badge-student {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-course {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-exam {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.badge-cert {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.badge-user {
+  background: #ffe4e6;
+  color: #be123c;
+}
+
+.badge-branch {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.badge-analytics {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* ==========================
+   PILLS
+========================== */
+
+.feature-pill {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 6px 12px;
+}
+
+/* ==========================
+   ICON BOX
+========================== */
+
+.sub-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, .05);
+}
+
+/* =============== MOCKUPS  ============= */
+
+.mockup-wrapper {
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-wrapper img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+}
+
+/* =============  ANALYTICS CARD  ================ */
+
+.analytics-card-base {
+  width: 100%;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .05);
+}
+
+.bar-chart-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 70px;
+}
+
+.bar-column {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+}
+
+/* ===============  / USER =============== */
+
+.node-connector {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+}
+
+.branch-node {
+  transition: .3s;
+}
+
+.branch-node:hover {
+  transform: scale(1.05);
+}
+
+/* =============== RESPONSIVE ================= */
+
+/* Laptop */
+
+@media (max-width:1200px) {
+
+  .feature-card {
+    padding: 32px;
+  }
+
+  .mockup-wrapper {
+    min-height: 220px;
+  }
+
+}
+
+/* Tablet */
+
+@media (max-width:991px) {
+
+  .feature-card {
+    padding: 28px;
+  }
+
+  .mockup-wrapper {
+    min-height: auto;
+    margin-bottom: 25px;
+  }
+
+  .feature-card .row {
+    text-align: center;
+  }
+
+  .sub-icon-box {
+    margin: auto;
+  }
+
+  .d-flex.flex-wrap {
+    justify-content: center;
+  }
+
+  .analytics-card-base {
+    max-width: 100%;
+  }
+
+  .certification-wrapper {
+    padding: 24px;
+  }
+
+  .contact-wrapper {
+    padding: 28px;
+  }
+
+}
+
+.certification-wrapper {
+  padding: 24px;
+}
+
+/* Small Mobile */
+
+@media (max-width:575px) {
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 21px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+
+  .mockup-wrapper img {
+    width: 100%;
+  }
+
+  .feature-pill {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .sub-icon-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .certification-wrapper {
+    padding: 20px;
+  }
+
 }
 
 
-.text-gray-100 {
-  color: #f8f9fa !important;
-}
 
-.h-17 {
-  height: 7rem !important;
-}
 
-.w-17 {
-  width: 7rem !important;
-}
-
-.min-h-350 {
-  min-height: 350px;
-}
-
-.rounded-4 {
-  border-radius: 0.75rem !important;
-}
-
-.rounded-5 {
-  border-radius: 1rem !important;
-}
-
-.bg-deepyellow {
-  background-color: #fbdd00 !important;
-}
-
-.text-gray-900 {
-  color: #212529 !important;
-}
-
-.bg-success {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
-}
-
- .pb-65{
-  padding-bottom: 65px;
- }
 
 /*# sourceMappingURL=../maps/styles.css.map */
