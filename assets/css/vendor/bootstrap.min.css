@@ -9692,7 +9692,7 @@ fieldset:disabled .btn {
 }
 
 .fw-normal {
-    font-weight: 400 !important
+    font-weight: 500 !important
 }
 
 .fw-bold {
@@ -9825,7 +9825,7 @@ fieldset:disabled .btn {
 
 .text-muted {
     --bs-text-opacity: 1;
-    color: #6c757d !important
+    color: #323538 !important
 }
 
 .text-black-50 {
