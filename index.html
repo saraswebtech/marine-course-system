@@ -30,6 +30,196 @@
     <link rel="stylesheet" href="assets/css/plugins/jodit.min.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        .flowchart-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Node Styling */
+        .node {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 2px solid #e0e0e0;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .node i {
+            margin-bottom: 10px;
+        }
+
+        /* Specific Colors matching the MSMS.jpg */
+        .node.start {
+            background: #1a4480;
+            color: white;
+            border-color: #1a4480;
+            border-radius: 30px;
+            min-height: 50px;
+            padding: 10px 30px;
+            width: auto;
+        }
+
+        .node.dashboard {
+            border-color: #1a4480;
+            color: #1a4480;
+            background:#95cfee;
+        }
+
+        .node.multi-user {
+            border-color: #4caf50;
+            color: #4caf50;
+            background:#aedeb0;
+        }
+
+        .node.multi-branch {
+            border-color: #9c27b0;
+            color: #9c27b0;
+            background:#efbff8;
+        }
+
+        .node.student {
+            border-color: #ff9800;
+            color: #ff9800;
+            background:#e5cba5;
+        }
+
+        .node.courses {
+            border-color: #00838f;
+            color: #00838f;
+            background:#b4d7eb;
+        }
+
+        .node.exam {
+            border-color: #e91e63;
+            color: #e91e63;
+            background:#ebb3c5;
+        }
+
+        .node.cert {
+            border-color: #1976d2;
+            color: #1976d2;
+            background:#a5c3e1;
+        }
+
+        .node.report {
+            border-color: #2e7d32;
+            color: #2e7d32;
+            background:#abe5ae;
+;
+        }
+
+        .node.stop {
+            background: #00897b;
+            color: white;
+            border-color: #00897b;
+            border-radius: 30px;
+            min-height: 50px;
+            padding: 10px 30px;
+            width: auto;
+        }
+
+        /* Diamond Shape for Decisions */
+        .decision {
+            width: 120px;
+            height: 120px;
+            background: #fff;
+            border: 2px solid #ff9800;
+            transform: rotate(45deg);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .decision-text {
+            transform: rotate(-45deg);
+            color: #ff9800;
+        }
+
+        /* Animated Arrows */
+        .arrow-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            position: relative;
+        }
+
+        .arrow-svg {
+            width: 4px;
+            height: 100%;
+        }
+
+        .arrow-svg line {
+            stroke: #adb5bd;
+            stroke-width: 4;
+            stroke-dasharray: 8;
+            animation: flow 1s linear infinite;
+        }
+
+        .arrow-head {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid #adb5bd;
+        }
+
+        @keyframes flow {
+            from {
+                stroke-dashoffset: 16;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Connecting Lines Horizontal Base */
+        .horizontal-connector {
+            border-top: 4px solid #adb5bd;
+            width: 87%;
+            margin: 0 auto;
+            position: relative;
+            top:-10px;
+            z-index: -1;
+        }
+
+        @media (max-width: 992px) {
+            .horizontal-connector {
+                display: none;
+            }
+
+            .col-lg {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Decision Labels (Yes/No) */
+        .decision-label {
+            color: #495057;
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
 </head>
 
 <body class="rbt-header-sticky">
@@ -955,6 +1145,200 @@
         </div>
     </div>
     <!-- solution end -->
+
+    <div class="container flowchart-container">
+        <h2 class="mb-5" style="color: #0b2240;">
+            Marine Student Management System (MSMS) Flowchart
+        </h2>
+
+        <!-- START -->
+        <div class="d-flex justify-content-center">
+            <div class="node start">
+                <i class="fa fa-power-off mb-0 me-2 d-inline"></i> START
+            </div>
+        </div>
+
+        <!-- Arrow Down -->
+        <div class="arrow-line">
+            <svg class="arrow-svg">
+                <line x1="2" y1="0" x2="2" y2="40"></line>
+            </svg>
+            <div class="arrow-head"></div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="node dashboard">
+                    <i class="fa fa-laptop-code"></i>
+                    DASHBOARD<br>
+                    <small class="text-muted">
+                        Overview of activities & quick access to modules
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrow Down (Main Branch) -->
+        <div class="arrow-line" style="height: 30px;">
+            <svg class="arrow-svg">
+                <line x1="2" y1="0" x2="2" y2="30"></line>
+            </svg>
+        </div>
+
+        <!-- Horizontal Connector -->
+        <div class="horizontal-connector d-none d-lg-block"></div>
+
+        <!-- MAIN MODULES -->
+        <div class="row mt-lg-0 mt-3 gx-2 position-relative">
+
+            <!-- Multi User -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node multi-user">
+                    <i class="fa fa-users"></i>
+                    MULTI USER
+                </div>
+            </div>
+
+            <!-- Multi Branch -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node multi-branch">
+                    <i class="fa fa-building"></i>
+                    MULTI BRANCH
+                </div>
+            </div>
+
+            <!-- Student Management -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node student">
+                    <i class="fa fa-user-graduate"></i>
+                    STUDENT MANAGEMENT
+                </div>
+
+                <!-- Student Sub Flow -->
+                <div class="arrow-line">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="40"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="decision">
+                    <div class="decision-text">
+                        Student<br>Added?
+                    </div>
+                </div>
+
+                <div class="arrow-line position-relative">
+                    <span class="decision-label" style="top: 10px; right: 10px;">Yes</span>
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="40"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node courses">
+                    <i class="fa fa-book-open"></i>
+                    Assign Courses<br>to Student
+                </div>
+            </div>
+
+            <!-- Courses Added -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node courses">
+                    <i class="fa fa-book"></i>
+                    COURSES ADDED
+                </div>
+            </div>
+
+            <!-- Online Exam -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node exam">
+                    <i class="fa fa-clipboard-list"></i>
+                    ONLINE EXAM
+                </div>
+            </div>
+
+            <!-- Certificate -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node cert">
+                    <i class="fa fa-file-signature"></i>
+                    CERTIFICATE GENERATION
+                </div>
+            </div>
+
+            <!-- Report & Analysis -->
+            <div class="col-lg col-md-6">
+                <div class="arrow-line d-none d-lg-flex" style="height: 20px;">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="20"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <div class="node report" style="min-height: 150px;">
+                    <i class="fa fa-chart-pie"></i>
+                    REPORT & ANALYSIS
+                </div>
+
+                <div class="arrow-line">
+                    <svg class="arrow-svg">
+                        <line x1="2" y1="0" x2="2" y2="40"></line>
+                    </svg>
+                    <div class="arrow-head"></div>
+                </div>
+
+                <!-- STOP -->
+                <div class="node stop">
+                    <i class="fa fa-check mb-0 me-2 d-inline"></i>
+                    STOP
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Start Certification Area -->
     <div class="rbt-banner-area rbt-banner-7 theme-shape header-transperent-spacer" id="certification">
