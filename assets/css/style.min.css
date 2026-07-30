@@ -25,7 +25,7 @@
     --dark-slate-blue: #1f232c;
     --extra-dark-slate-blue: #121418;
     --extra-very-slate-blue: #161620;
-    --tussock-yellow: #BC8947;
+    --tussock-yellow: #2d2247;
     --aluminium-gray: #80858F;
     --solitude-blue: #f0f4fd;
     --golden-yellow: #fd961e;
@@ -246,7 +246,7 @@ h5 {
 }
 
 h6 {
-    font-size: 1.75rem;
+    font-size: 1.5625rem;
     line-height: 1.95rem
 }
 
@@ -23572,7 +23572,19 @@ footer .footer-navbar .nav-item:last-child a {
 }
 
 .footer-demo img {
-    max-height: 55px !important
+    max-height: 55px !important;
+}
+
+
+.bg-gradient-flamingo-amethyst-green {
+    background-image: linear-gradient(to right, #f7693c, #c74e45, #7d3785, #582d9f, #3928af);
+}
+
+
+.text-gradient-orange-sky-blue {
+    background-image: linear-gradient(to right, #f7693c, #c74e45, #7d3785, #582d9f, #3928af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.min.css.map */
