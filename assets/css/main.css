@@ -196,3 +196,20 @@ footer .footer-logo img {
         margin-bottom: -20px;
     }
 }
+
+/* sticky header*/
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: transparent;
+    transition: all .3s ease;
+}
+
+.sticky-header.scrolled {
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
