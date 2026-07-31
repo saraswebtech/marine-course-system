@@ -6760,6 +6760,10 @@ textarea:focus {
     margin-bottom: 70px !important
 }
 
+.mb-100px {
+    margin-bottom: 100px !important
+}
+
 .mb-1 {
     margin-bottom: 1% !important
 }

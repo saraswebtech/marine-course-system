@@ -10,9 +10,9 @@
     <meta name="description" content="#">
     <!-- favicon icon -->
     <link rel="shortcut icon" href="assets/images/favicon.webp">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon-57x57.webp">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.webp">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.webp">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,46 +26,32 @@
     <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
     <style>
         .glass-card {
-            /* background: linear-gradient(180deg, #151129, #100c20); */
+            position: relative;
+            overflow: hidden;
             border: 1px solid #433d74;
             border-radius: 25px;
             padding: 30px;
-            /* height: 100%; */
+        }
+
+        .icon-2 {
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            font-size: 90px;
+            opacity: 0.12;
+            color: var(--dark-gray);
+            transform: rotate(-25deg);
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .glass-card:hover .icon-2 {
+            opacity: 0.2;
+            transform: rotate(-20deg) scale(1.05);
         }
 
         .center-card {
-            min-height: 720px;
-        }
-
-        .robot-circle {
-            width: 280px;
-            height: 280px;
-            margin: 40px auto;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff00b7, #2d7cff);
-            padding: 8px;
-        }
-
-        .robot-circle img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #fff;
-        }
-
-        .badge {
-            padding: 10px 15px;
-            border-radius: 30px;
-        }
-
-        .progress {
-            height: 8px;
-            background: #2d2744;
-        }
-
-        .list-group-item {
-            border-color: #34304d;
+            min-height: 450px;
         }
 
         @media(max-width:991px) {
@@ -73,14 +59,51 @@
             .center-card {
                 min-height: auto;
             }
+        }
 
-            .robot-circle {
-                width: 220px;
-                height: 220px;
-            }
+        .vector-bg {
+            position: relative;
+            min-height: 450px;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid #433d74;
+        }
 
+        .bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            color: #fff;
+            top: 350px;
+        }
+
+        .vector-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 1;
+        }
+
+        .bg-cosmic-latte-white {
+            background-color: #F2FBF9;
+        }
+
+        .bg-lavender-violet {
+            background-color: #F5EDFC;
         }
     </style>
+
+
 </head>
 
 <body data-mobile-nav-style="classic" class="custom-cursor background-position-center-top"
@@ -120,15 +143,12 @@
             <nav class="navbar navbar-expand-lg sticky-header header-light  ">
                 <div class="container-fluid">
                     <div class="col-auto col-lg-3 me-lg-0 me-auto">
-                        <a class="navbar-brand" href="demo-modern-business.html">
-                            <img src="assets/images/demo-modern-business-logo-black.webp"
-                                data-at2x="assets/images/demo-modern-business-logo-black@2x.webp" alt=""
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/images/demo-modern-business-logo-black.webp" alt="Marinex"
                                 class="default-logo">
-                            <img src="assets/images/demo-modern-business-logo-black.webp"
-                                data-at2x="assets/images/demo-modern-business-logo-black@2x.webp" alt=""
+                            <img src="assets/images/demo-modern-business-logo-black.webp" alt="Marinex"
                                 class="alt-logo">
-                            <img src="assets/images/demo-modern-business-logo-black.webp"
-                                data-at2x="assets/images/demo-modern-business-logo-black@2x.webp" alt=""
+                            <img src="assets/images/demo-modern-business-logo-black.webp" alt="Marinex"
                                 class="mobile-logo">
                         </a>
                         <div class="d-xxl-flex d-none align-items-center ms-15px">
@@ -164,7 +184,7 @@
 
                             </div>
                             <div class="header-button ms-10px d-none d-xl-inline-block">
-                                <a href="mailto:info@domin.com"
+                                <a href="mailto:info@saraswebtech.com"
                                     class="btn btn-rounded btn-transparent-light-gray btn-small btn-switch-text text-transform-none">
                                     <span>
                                         <span class="btn-double-text" data-text="Get started">Book a Free Demo</span>
@@ -368,230 +388,8 @@
         </section>
         <!--Multi-Level Access end section -->
 
-        <!--Core Features start section -->
-        <section class="cover-background border-radius-10px overflow-visible">
-            <img src="assets/images/demo-modern-business-elements-03.webp" alt=""
-                class="position-absolute left-minus-30px md-left-0px top-minus-80px animation-rotation d-none d-md-block">
-            <div class="container-fluid overflow-hidden">
-                <div class="row"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="col-12 text-center">
-                        <span
-                            class="ps-20px pe-20px pt-5px pb-5px mb-15px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i
-                                class="bi bi-box-seam fs-16 me-5px"></i>Core Features</span>
-                        <h3 class="alt-font text-dark-gray fw-700 ls-minus-05px mb-30px sm-mb-0">Everything you need to
-                            run a modern, automated training institute.
-                        </h3>
-                    </div>
-                </div>
-                <div class="row mb-25px sm-mb-0"
-                    data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="col-md-12">
-                        <div
-                            class="outside-box-right-15 outside-box-left-15 sm-outside-box-right-0 sm-outside-box-left-0">
-                            <div class="swiper magic-cursor"
-                                data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "autoplay": { "delay": 250000, "disableOnInteraction": false },  "pagination": { "el": ".slider-four-slide-pagination-1", "clickable": true }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1600": { "slidesPerView": 6 }, "1400": { "slidesPerView": 5 }, "1200": { "slidesPerView": 4 }, "991": { "slidesPerView": 3 }, "768": { "slidesPerView": 3 } }, "effect": "slide" }'>
-                                <div class="swiper-wrapper pt-30px pb-30px">
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-01.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Multi-Branch
-                                                    Management</a>
-                                                <p>Super Admin can effortlessly create multiple branches and assign
-                                                    dedicated Admins for smooth operations.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-02.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Student
-                                                    & Course Management</a>
-                                                <p>Branch Admins can add courses, create batches, and enroll students
-                                                    seamlessly.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-03.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Marketing</a>
-                                                <p>We build real-world web solutions ideal for all project sizes and a
-                                                    range of requirements.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-04.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Content
-                                                    writing</a>
-                                                <p>Deliver web solutions designed to meet the evolving needs of startups
-                                                    alike.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-05.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Product
-                                                    design</a>
-                                                <p>Create scalable web solutions tailored for startups to
-                                                    enterprise-level project needs.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-01.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Development</a>
-                                                <p>We build flexible web solutions that grow from small startups to
-                                                    large-scale demands.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-02.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">UX
-                                                    / UI Design</a>
-                                                <p>From startups to enterprises, we craft adaptable web solutions that
-                                                    scale with your business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-03.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Marketing</a>
-                                                <p>We deliver web solutions designed to meet the evolving needs of
-                                                    startups alike.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-04.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Content
-                                                    writing</a>
-                                                <p>We build real-world web solutions ideal for all project sizes and a
-                                                    range of requirements.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                    <!-- start slider item -->
-                                    <div class="swiper-slide box-shadow-extra-large">
-                                        <div
-                                            class="border-radius-10px bg-white pt-40px pb-40px ps-50px pe-50px xxl-p-30px justify-content-start text-start">
-                                            <a href="demo-modern-business-services-details.html"
-                                                class="text-center d-block mb-50px md-mb-30px"><img
-                                                    src="assets/images/demo-modern-business-services-05.webp"
-                                                    alt="" /></a>
-                                            <div class="last-paragraph-no-margin text-center text-md-start">
-                                                <a href="demo-modern-business-services-details.html"
-                                                    class="d-inline-block alt-font text-dark-gray fw-600 fs-20 mb-5px ls-minus-05px ls-minus-05px">Product
-                                                    design</a>
-                                                <p>From startups to enterprises, we craft adaptable web solutions that
-                                                    scale with your business.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end slider item -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- start slider pagination -->
-                        <!--<div class="swiper-pagination slider-four-slide-pagination-1 swiper-pagination-style-2 swiper-pagination-clickable swiper-pagination-bullets"></div>-->
-                        <!-- end slider pagination -->
-                    </div>
-                </div>
-                <div class="row"
-                    data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="col-12 text-center">
-                        <i
-                            class="bi bi-window-fullscreen text-dark-gray d-inline-block align-middle icon-extra-medium me-5px md-m-5px"></i>
-                        <div class="fs-20 alt-font text-dark-gray d-inline-block align-middle fw-500 ls-minus-05px">
-                            Create your own website in one time without any coding knowledge.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Core Features end section -->
-
         <!--QR Verification  start section -->
-        <section class="position-relative bg-spring-wood">
+        <section class="position-relative ">
             <img src="assets/images/demo-modern-business-elements-05.webp" alt=""
                 class="position-absolute left-minus-100px top-150px animation-rotation d-none d-xl-block">
             <div class="container">
@@ -619,9 +417,10 @@
                                         <span class="progress-step-separator bg-dark-gray opacity-1"></span>
                                     </div>
                                     <div class="process-content ps-30px last-paragraph-no-margin mb-30px">
-                                        <span class="d-block fw-600 text-dark-gray mb-5px fs-18">Start market
-                                            research</span>
-                                        <p class="w-90 lg-w-100">Lorem ipsum amet consectetur eiusmod tempor incididunt.
+                                        <span class="d-block fw-600 text-dark-gray mb-5px fs-18">Candidate enrollment
+                                            & exam</span>
+                                        <p class="w-90 lg-w-100">Students register for courses and appear for online
+                                            exams directly through the institute portal.
                                         </p>
                                     </div>
                                 </div>
@@ -639,9 +438,10 @@
                                         <span class="progress-step-separator bg-dark-gray opacity-1"></span>
                                     </div>
                                     <div class="process-content ps-30px last-paragraph-no-margin mb-30px">
-                                        <span class="d-block fw-600 text-dark-gray mb-5px fs-18">Discussion of the
-                                            idea</span>
-                                        <p class="w-90 lg-w-100">Lorem ipsum amet consectetur eiusmod tempor incididunt.
+                                        <span class="d-block fw-600 text-dark-gray mb-5px fs-18">QR code
+                                            generation</span>
+                                        <p class="w-90 lg-w-100">Upon successful completion, the system generates a
+                                            secure QR-verified certificate for each candidate.
                                         </p>
                                     </div>
                                 </div>
@@ -658,9 +458,10 @@
                                         </div>
                                     </div>
                                     <div class="process-content ps-30px last-paragraph-no-margin">
-                                        <span class="d-block fw-600 text-dark-gray mb-5px fs-18">Production
-                                            planning</span>
-                                        <p class="w-90 lg-w-100">Lorem ipsum amet consectetur eiusmod tempor incididunt.
+                                        <span class="d-block fw-600 text-dark-gray mb-5px fs-18">Instant
+                                            verification</span>
+                                        <p class="w-90 lg-w-100">Employers and authorities scan the QR code to instantly
+                                            verify the certificate and candidate credentials.
                                         </p>
                                     </div>
                                 </div>
@@ -681,8 +482,8 @@
                                 class="h-65px w-65px d-flex align-items-center justify-content-center rounded-circle bg-base-color mx-auto">
                                 <i class="bi bi-fire align-middle text-white fs-30"></i>
                             </div>
-                            <h5 class="alt-font text-dark-gray fw-700 lh-22 mb-0 mt-20px">148%</h5>
-                            <span class="fs-14 text-dark-gray opacity-7">Agency growth</span>
+                            <h5 class="alt-font text-dark-gray fw-700 lh-22 mb-0 mt-20px">10K+</h5>
+                            <span class="fs-14 text-dark-gray opacity-7">Certificates issued</span>
                         </div>
                     </div>
                 </div>
@@ -690,147 +491,136 @@
         </section>
         <!--QR Verification  end section -->
 
-        <!-- features start -->
-        <section class="py-5">
+        <!--Why choose start section -->
+        <section class="position-relative overflow-hidden bg-spring-wood">
             <div class="container">
-                <div class="row g-4">
-                    <!-- Left -->
-                    <div class="col-lg-3">
-                        <div class="glass-card mb-4">
-                            <small class="text-uppercase text-primary fw-bold">Content Formats</small>
-                            <h3 class="mt-3">6 formats.<br>One workflow.</h3>
-                            <p class="text-secondary">
-                                From quick explainers to full learning pathways.
-                            </p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-secondary">Basic Video</span>
-                                <span class="badge bg-secondary">Advanced</span>
-                                <span class="badge bg-secondary">Talking Head</span>
-                                <span class="badge bg-secondary">MCQ</span>
-                                <span class="badge bg-secondary">Simulation</span>
-                                <span class="badge bg-secondary">Game</span>
-                            </div>
-                        </div>
-                        <div class="glass-card">
-                            <small class="text-uppercase text-primary fw-bold">
-                                AI + HUMAN
-                            </small>
-                            <h4 class="mt-3">
-                                100% Human in the Loop
-                            </h4>
-                            <ul class="list-unstyled mt-4">
-                                <li class="mb-3">
-                                    ✔ Extract & Structure
-                                </li>
-                                <li class="mb-3">
-                                    ✔ Review & Refine
-                                </li>
-                                <li class="mb-3">
-                                    ✔ Generate Content
-                                </li>
-                                <li>
-                                    ✔ Publish
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <!-- Center -->
-                    <div class="col-lg-6">
-                        <div class="glass-card position-relative center-card">
-                            <h2 class="text-center fw-bold">
-                                AGENTIC AI PURPOSE-BUILT
-                            </h2>
-                            <div class="text-center my-4">
-                                <button class="btn btn-outline-light btn-sm">
-                                    Document
-                                </button>
-                                <button class="btn btn-outline-light btn-sm">
-                                    SCORM
-                                </button>
-                                <button class="btn btn-outline-light btn-sm">
-                                    LMS
-                                </button>
-                            </div>
-                            <div class="robot-circle">
-                                <img src="assets/images/robot.png" class="img-fluid">
-                            </div>
-                            <div class="row mt-5">
-                                <div class="col-md-6">
-                                    <h5>Production Speed</h5>
-                                    <h1 class="display-4 fw-bold text-primary">
-                                        4X
-                                    </h1>
-                                    <p>
-                                        Faster than traditional production.
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h5>What's Coming</h5>
-                                    <ul>
-                                        <li>Sales Coach</li>
-                                        <li>Assessment</li>
-                                        <li>AI Support</li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="row align-items-center position-relative">
+                    <div class="col-lg-4">
+                        <div class="outside-box-left-0 md-outside-box-left-0"
+                            data-bottom-top="transform:scale(1.1, 1.1)" data-top-bottom="transform:scale(1, 1)">
+                            <img src="assets/images/demo-web-agency-01.jpg" alt="" />
                         </div>
                     </div>
+                    <div class="col-lg-8 md-mt-35px"
+                        data-anime='{ "el": "childs", "translateX": [15, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h2 class="text-dark-gray fw-600 mb-40px md-mb-25px ls-minus-3px word-break-normal">
+                            Why Choose Saras Webtech's Solution?</h2>
 
-                    <!-- Right -->
-                    <div class="col-lg-3">
-                        <div class="glass-card mb-4">
-                            <small class="text-uppercase text-primary fw-bold">
-                                Learning Depth
-                            </small>
-                            <h4 class="mt-3">
-                                Structured Learning
-                            </h4>
-                            <div class="mt-4">
-                                <p>3-5 min</p>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" style="width:30%"></div>
-                                </div>
+                        <ul class=" list-style-01 fw-500 mb-40px">
+                            <li class="border-color-transparent-dark-light pt-10px pb-10px text-light-gray">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <strong class="text-dark-gray">100% Cloud-Based & Secure - </strong>
+                                <p class="mb-0 ms-20px">White-label the platform with your institute logos, custom
+                                    certificate templates, and domain names.</p>
+                            </li>
+
+                            <li class="border-color-transparent-dark-light pt-10px pb-10px text-light-gray">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <strong class="text-dark-gray">100% Cloud-Based & Secure - </strong>
+                                <p class="mb-0 ms-20px">White-label the platform with your institute logos, custom
+                                    certificate templates, and domain names.</p>
+                            </li>
+
+                            <li class="border-color-transparent-dark-light pt-10px pb-10px text-light-gray">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <strong class="text-dark-gray">100% Cloud-Based & Secure - </strong>
+                                <p class="mb-0 ms-20px">White-label the platform with your institute logos, custom
+                                    certificate templates, and domain names.</p>
+                            </li>
+
+                            <li class="border-color-transparent-dark-light pt-10px pb-10px text-light-gray">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <strong class="text-dark-gray">100% Cloud-Based & Secure - </strong>
+                                <p class="mb-0 ms-20px">White-label the platform with your institute logos, custom
+                                    certificate templates, and domain names.</p>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                    <h5 class="text-dark-gray fw-500 mb-100px"> How Its Works</h5>
+
+                    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 m-0 justify-content-center"
+                        data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <!-- start process step item -->
+                        <div class="col process-step-style-10  sm-mb-20px position-relative hover-box ">
+                            <div class="process-step-icon-box position-absolute top-minus-70px  md-left-0px">
+                                <div
+                                    class="number d-inline-block fs-90 fw-700 text-outline text-outline-color-extra-medium-gray">
+                                    01</div>
                             </div>
-                            <div class="mt-3">
-                                <p>5-20 min</p>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" style="width:70%"></div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <p>20+ min</p>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" style="width:100%"></div>
-                                </div>
+                            <span class="fs-19 fw-600 text-dark-gray mb-5px d-block position-relative">Web
+                                design</span>
+                            <div class="position-relative pb-60px last-paragraph-no-margin">
+                                <p class="lh-30 w-90 sm-w-100">We create compelling web designs, which are the
+                                    right-fit for
+                                    your target groups.</p>
+
                             </div>
                         </div>
-                        <div class="glass-card">
-                            <small class="text-uppercase text-primary fw-bold">
-                                Deployment
-                            </small>
-                            <ul class="list-group mt-4">
-                                <li class="list-group-item bg-transparent text-white">
-                                    SCORM ✔
-                                </li>
-                                <li class="list-group-item bg-transparent text-white">
-                                    xAPI ✔
-                                </li>
-                                <li class="list-group-item bg-transparent text-white">
-                                    Mobile ✔
-                                </li>
-                                <li class="list-group-item bg-transparent text-white">
-                                    LMS ✔
-                                </li>
-                            </ul>
+                        <!-- end process step item -->
+
+                        <!-- start process step item -->
+                        <div class="col process-step-style-10  sm-mb-20px position-relative mt-40px md-mt-0 hover-box ">
+                            <div class="process-step-icon-box position-absolute top-minus-70px  md-left-0px">
+                                <div
+                                    class="number d-inline-block fs-90 fw-700 text-outline text-outline-color-extra-medium-gray">
+                                    02</div>
+                            </div>
+                            <span class="fs-19 fw-600 text-dark-gray mb-5px d-block position-relative">Web
+                                development</span>
+                            <div class="position-relative pb-60px last-paragraph-no-margin">
+                                <p class="lh-30 w-90 sm-w-100">We create compelling web designs, which are the
+                                    right-fit for
+                                    your target groups.</p>
+
+                            </div>
                         </div>
+                        <!-- end process step item -->
+
+                        <!-- start process step item -->
+                        <div class="col process-step-style-10  sm-mb-20px position-relative hover-box">
+                            <div class="process-step-icon-box position-absolute top-minus-70px  md-left-0px">
+                                <div
+                                    class="number d-inline-block fs-90 fw-700 text-outline text-outline-color-extra-medium-gray">
+                                    03</div>
+                            </div>
+                            <span class="fs-19 fw-600 text-dark-gray mb-5px d-block position-relative">eCommerce
+                                solutions</span>
+                            <div class="position-relative pb-60px last-paragraph-no-margin">
+                                <p class="lh-30 w-90 sm-w-100">We create compelling web designs, which are the
+                                    right-fit for
+                                    your target groups.</p>
+
+                            </div>
+                        </div>
+                        <!-- end process step item -->
+
+                        <!-- start process step item -->
+                        <div class="col process-step-style-10 mt-40px md-mt-0 sm-mb-20px position-relative hover-box ">
+                            <div class="process-step-icon-box position-absolute top-minus-70px  md-left-0px">
+                                <div
+                                    class="number d-inline-block fs-90 fw-700 text-outline text-outline-color-extra-medium-gray">
+                                    04</div>
+                            </div>
+                            <span class="fs-19 fw-600 text-dark-gray mb-5px d-block position-relative">eCommerce
+                                solutions</span>
+                            <div class="position-relative pb-60px last-paragraph-no-margin">
+                                <p class="lh-30 w-90 sm-w-100">We create compelling web designs, which are the
+                                    right-fit for
+                                    your target groups.</p>
+
+                            </div>
+                        </div>
+                        <!-- end process step item -->
                     </div>
                 </div>
             </div>
+
         </section>
-        <!-- feature end -->
-         
+        <!-- end section -->
+
         <!--CTA start section -->
         <section
             class="pt-25px pb-25px bg-dark-gray ps-65px pe-65px sm-pe-0 sm-ps-0 lg-pe-15px xxl-pe-45px md-pt-10px md-pb-10px position-relative">
@@ -861,37 +651,90 @@
         </section>
         <!--CTA end section -->
 
-        <!-- start FAQ section -->
-        <section class="bg-spring-wood">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <span
-                            class="ps-20px pe-20px pt-5px pb-5px mb-20px text-uppercase alt-font text-base-color fs-12 lh-26 fw-600 alt-font border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex"><i
-                                class="bi bi-headphones fs-16 me-5px"></i>Customer support</span>
-                        <h2 class="alt-font text-dark-gray fw-700 mb-15px">Got questions?</h2>
-                        <p class="mb-0">If you have any other questions?</p>
-                        <p>Please get in touch at <a href="mailto:info@support.com"
-                                class="text-dark-gray border-bottom border-color-dark-gray fw-500">info@support.com</a>
-                        </p>
-                        <div
-                            class="border-top border-color-extra-medium-gray mt-30px pt-10px w-100 sm-mt-5px d-flex align-items-center">
-                            <img src="assets/images/demo-data-analysis-08.webp" alt="">
-                            <span class="fs-18 position-relative text-start">Support executive <span
-                                    class="fw-600 text-dark-gray d-block">1000+ satisfied.</span></span>
+        <!-- start section -->
+        <section class="pe-9 ps-9 xxl-pe-30px xxl-ps-30px">
+            <div class="cover-background background-no-repeat pt-100px md-pt-70px sm-pt-50px border-radius-18px lg-no-border-radius lr-container-line"
+                style="background-image: url('assets/images/demo-recruitment-bg-01.jpg')">
+                <div class="container">
+                    <div class="row mb-5 sm-mb-30px pt-60px">
+                        <div class="col-12 text-center"
+                            data-anime='{"el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span
+                                class="fs-13 lh-36 fw-600 ps-20px pe-20px mb-20px text-uppercase text-base-color border-radius-100px bg-gradient-very-light-gray-transparent d-inline-flex align-items-center"><i
+                                    class="bi bi-stars me-5px"></i>Experience the System Live</span>
+                            <h6 class="fw-600 text-dark-gray mb-0">Select a role below to request instant demo access —
+                                see how our Super Admin, Branch Admin, and Student portals work</h6>
                         </div>
                     </div>
-                    <div class="col-xl-7 col-lg-7 offset-xl-1">
+                    <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 justify-content-center"
+                        data-anime='{ "el": "childs", "perspective": [1200,1200], "scale": [1.2, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="col md-mb-30px text-center text-md-start">
+                            <div
+                                class="bg-cosmic-latte-white pt-40px ps-45px pe-45px lg-ps-35px lg-pe-35px border-radius-18px">
+                                <span class="fs-20 fw-600 d-block text-dark-gray mb-5px"
+                                    data-anime='{"translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Super
+                                    Admin Panel</span>
+                                <p class="m-0"><span>Best for : </span> Owners & Directors</p>
+                                <p><span>Features : </span> Multi-branch control, centralized revenue &
+                                    system logs.</p>
+                                <div class="pb-20px">
+                                    <a href="#"
+                                        class="btn btn-extra-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto">Request
+                                        Super Admin Access <span class="bg-dark-gray text-white"><i
+                                                class="fa-solid fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col md-mb-30px text-center text-md-start">
+                            <div
+                                class="bg-lavender-violet pt-40px ps-45px pe-45px lg-ps-35px lg-pe-35px border-radius-18px">
+                                <span class="fs-20 fw-600 d-block text-dark-gray mb-5px"
+                                    data-anime='{"translateY": [50, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Branch
+                                    Admin Panel</span>
+                                <p class="m-0"><span>Best for : </span> Owners & Directors</p>
+                                <p><span>Features : </span> Multi-branch control, centralized revenue &
+                                    system logs.</p>
+                                <div class="pb-20px">
+                                    <a href="#"
+                                        class="btn btn-extra-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto">Request
+                                        Branch Access <span class="bg-dark-gray text-white"><i
+                                                class="fa-solid fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+
+        <!--Faq start section -->
+        <section class="big-section bg-spring-wood">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-4 col-lg-5 position-relative md-mb-25px"
+                        data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <h2 class="fw-700 alt-font text-dark-gray ls-minus-2px">Have a hosting question?</h2>
+                        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry has been.</p>
+                        <div><span
+                                class="text-dark-gray fs-30 me-5px align-middle fancy-text-style-4 ls-minus-1px">&#128075;
+                                Say <span class="fw-600"
+                                    data-fancy-text='{ "effect": "rotate", "string": ["hello!", "hallå!", "salve!"] }'></span></span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 col-lg-7 offset-xxl-1">
                         <div class="accordion accordion-style-02" id="accordion-style-02"
-                            data-active-icon="icon-feather-minus" data-inactive-icon="icon-feather-plus">
+                            data-active-icon="icon-feather-chevron-up" data-inactive-icon="icon-feather-chevron-down"
+                            data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                             <!-- start accordion item -->
                             <div class="accordion-item active-accordion">
                                 <div class="accordion-header border-bottom border-color-extra-medium-gray">
                                     <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-01"
                                         aria-expanded="true" data-bs-parent="#accordion-style-02">
-                                        <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                            <i class="feather icon-feather-minus"></i><span class="fs-18 fw-500">What
-                                                are some examples of AI technologies?</span>
+                                        <div class="accordion-title mb-0 position-relative text-dark-gray pe-30px">
+                                            <i class="feather icon-feather-chevron-up icon-extra-medium"></i><span
+                                                class="fw-600 fs-18">How long is this site live?</span>
                                         </div>
                                     </a>
                                 </div>
@@ -899,8 +742,9 @@
                                     data-bs-parent="#accordion-style-02">
                                     <div
                                         class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                        <p>Lorem ipsum is simply dummy text of the printing typesetting industry.
-                                            Industry's standard dummy text ever since the dummy.</p>
+                                        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry
+                                            lorem ipsum has been the industry's standard dummy text ever unknown
+                                            printer.</p>
                                     </div>
                                 </div>
                             </div>
@@ -910,9 +754,10 @@
                                 <div class="accordion-header border-bottom border-color-extra-medium-gray">
                                     <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-02"
                                         aria-expanded="false" data-bs-parent="#accordion-style-02">
-                                        <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                            <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">What is
-                                                potential for AI in customer service?</span>
+                                        <div class="accordion-title mb-0 position-relative text-dark-gray pe-30px">
+                                            <i class="feather icon-feather-chevron-down icon-extra-medium"></i><span
+                                                class="fw-600 fs-18">Can i install/upload anything is want on
+                                                there?</span>
                                         </div>
                                     </a>
                                 </div>
@@ -920,20 +765,21 @@
                                     data-bs-parent="#accordion-style-02">
                                     <div
                                         class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                        <p>Lorem ipsum is simply dummy text of the printing typesetting industry.
-                                            Industry's standard dummy text ever since the dummy.</p>
+                                        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry
+                                            lorem ipsum has been the industry's standard dummy text ever unknown
+                                            printer.</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- end accordion item -->
                             <!-- start accordion item -->
                             <div class="accordion-item">
-                                <div class="accordion-header border-bottom border-color-extra-medium-gray">
+                                <div class="accordion-header border-bottom border-color-light-medium-gray">
                                     <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-03"
                                         aria-expanded="false" data-bs-parent="#accordion-style-02">
-                                        <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                            <i class="feather icon-feather-plus"></i><span class="fs-18 fw-500">Do you
-                                                charge by the job or by the hour?</span>
+                                        <div class="accordion-title mb-0 position-relative text-dark-gray pe-30px">
+                                            <i class="feather icon-feather-chevron-down icon-extra-medium"></i><span
+                                                class="fw-600 fs-18">How can i migrate to another site?</span>
                                         </div>
                                     </a>
                                 </div>
@@ -941,8 +787,9 @@
                                     data-bs-parent="#accordion-style-02">
                                     <div
                                         class="accordion-body last-paragraph-no-margin border-bottom border-color-light-medium-gray">
-                                        <p>Lorem ipsum is simply dummy text of the printing typesetting industry.
-                                            Industry's standard dummy text ever since the dummy.</p>
+                                        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry
+                                            lorem ipsum has been the industry's standard dummy text ever unknown
+                                            printer.</p>
                                     </div>
                                 </div>
                             </div>
@@ -952,10 +799,9 @@
                                 <div class="accordion-header border-bottom border-color-transparent">
                                     <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-02-04"
                                         aria-expanded="false" data-bs-parent="#accordion-style-02">
-                                        <div class="accordion-title mb-0 position-relative text-dark-gray">
-                                            <i class="feather icon-feather-plus"></i><span
-                                                class="fs-18 fw-500">Something
-                                                marketing for everyone?</span>
+                                        <div class="accordion-title mb-0 position-relative text-dark-gray pe-30px">
+                                            <i class="feather icon-feather-chevron-down icon-extra-medium"></i><span
+                                                class="fw-600 fs-18">Can i change the domain you give me?</span>
                                         </div>
                                     </a>
                                 </div>
@@ -963,8 +809,9 @@
                                     data-bs-parent="#accordion-style-02">
                                     <div
                                         class="accordion-body last-paragraph-no-margin border-bottom border-color-transparent">
-                                        <p>Lorem ipsum is simply dummy text of the printing typesetting industry.
-                                            Industry's standard dummy text ever since the dummy.</p>
+                                        <p>Lorem ipsum is simply dummy text of the printing and typesetting industry
+                                            lorem ipsum has been the industry's standard dummy text ever unknown
+                                            printer.</p>
                                     </div>
                                 </div>
                             </div>
@@ -972,10 +819,10 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
-        <!-- end FAQ section -->
-
+        <!--Faq end section -->
 
         <!-- start section -->
         <section class="pt-90px pb-90px ">
@@ -999,8 +846,8 @@
 
                                 <div class="feature-box-content">
                                     <p class="lh-26 mb-0">Phone Appointment</p>
-                                    <a href="tel:+12345678910" class="fs-20 fw-600 text-dark-gray">
-                                        +1 234 567 8910
+                                    <a href="tel:+917039972727" class="fs-20 fw-600 text-dark-gray">
+                                        +91 70399 72727
                                     </a>
                                 </div>
 
@@ -1030,9 +877,9 @@
                                                 class="form-control border-color-transparent-dark-very-light bg-spring-wood"
                                                 name="select">
                                                 <option value="">Number of Branches</option>
-                                                <option value="Haircut">1</option>
-                                                <option value="Hair styling">2-5</option>
-                                                <option value="Shaving">5+</option>
+                                                <option value="1">1</option>
+                                                <option value="2-5">2-5</option>
+                                                <option value="5+">5+</option>
                                             </select>
                                         </div>
 
@@ -1053,11 +900,11 @@
                                     <div class="col-md-6 sm-mb-20px">
                                         <input
                                             class="mb-20px border-color-transparent-dark-very-light form-control bg-spring-wood required"
-                                            type="text" name="name" placeholder="Business Name*" />
+                                            type="text" name="subject" placeholder="Institute / Business Name*" />
 
                                         <input
                                             class="mb-20px border-color-transparent-dark-very-light form-control bg-spring-wood required"
-                                            type="tel" name="name" placeholder="Phone Number*" />
+                                            type="tel" name="phone" placeholder="Phone Number*" />
 
 
                                         <textarea
@@ -1066,6 +913,7 @@
                                     </div>
                                     <div class="col-md-6 text-center text-md-end mt-30px sm-mt-20px">
                                         <input class="bg-transparent" type="hidden" name="redirect" value="">
+                                        <input type="hidden" name="verify" value="7">
                                         <button
                                             class="btn btn-large btn-round-edge btn-box-shadow btn-switch-text btn-dark-gray left-icon submit w-100"
                                             type="submit">
@@ -1090,9 +938,6 @@
         <!-- end section -->
 
     </div>
-
-
-
 
     <!-- start footer -->
     <footer
