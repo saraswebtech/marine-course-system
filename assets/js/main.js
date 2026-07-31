@@ -544,7 +544,23 @@
     });
 
     /* ===================================
-     Custom scrollbar
+     Book a free demo buttons - open subscribe popup only
+     ====================================== */
+    $(document).on('click', '.open-subscribe-popup', function(e) {
+        e.preventDefault();
+        if ($('#subscribe-popup').length > 0 && typeof $.fn.magnificPopup === 'function') {
+            $.magnificPopup.open({
+                items: {
+                    src: '#subscribe-popup'
+                },
+                type: 'inline',
+                mainClass: 'my-mfp-zoom-in'
+            });
+        }
+    });
+
+    /* ===================================
+     Magnific popup
      ====================================== */
 
     if (typeof $.fn.mCustomScrollbar === 'function') {

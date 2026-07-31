@@ -4013,7 +4013,8 @@ textarea:focus {
 }
 
 .bg-spring-wood {
-    background-color: var(--spring-wood)
+    background-color: var(--spring-wood);
+    border-radius:10px;
 }
 
 .bg-tropical-blue {
