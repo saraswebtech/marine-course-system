@@ -24,7 +24,63 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
+    <style>
+        .glass-card {
+            /* background: linear-gradient(180deg, #151129, #100c20); */
+            border: 1px solid #433d74;
+            border-radius: 25px;
+            padding: 30px;
+            /* height: 100%; */
+        }
 
+        .center-card {
+            min-height: 720px;
+        }
+
+        .robot-circle {
+            width: 280px;
+            height: 280px;
+            margin: 40px auto;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff00b7, #2d7cff);
+            padding: 8px;
+        }
+
+        .robot-circle img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #fff;
+        }
+
+        .badge {
+            padding: 10px 15px;
+            border-radius: 30px;
+        }
+
+        .progress {
+            height: 8px;
+            background: #2d2744;
+        }
+
+        .list-group-item {
+            border-color: #34304d;
+        }
+
+        @media(max-width:991px) {
+
+            .center-card {
+                min-height: auto;
+            }
+
+            .robot-circle {
+                width: 220px;
+                height: 220px;
+            }
+
+        }
+    </style>
 </head>
 
 <body data-mobile-nav-style="classic" class="custom-cursor background-position-center-top"
@@ -534,227 +590,6 @@
         </section>
         <!--Core Features end section -->
 
-
-        <!-- start section -->
-        <section class="ps-13 pe-13 xxl-ps-8 xxl-pe-8 xl-ps-3 xl-pe-3 sm-ps-2 sm-pe-2 bg-light-majorelle-blue">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- start stack card -->
-                        <div class="stack-card cards" data-scale="true" data-top-space="35">
-                            <div class="stack-item mb-50px" data-index="1">
-                                <div class="stack-card-item p-70px xl-p-50px sm-p-30px cover-background"
-                                    style="background-image: url('assets/images/demo-modern-business-gradient-bg-01.jpg')">
-                                    <img src="assets/images/demo-modern-business-bg-01.webp" alt=""
-                                        class="position-absolute z-index-1 left-0px top-0px h-100 d-none d-lg-block"
-                                        data-bottom-top="transform:rotate(0deg); filter: blur(0px)"
-                                        data-top-bottom="transform:rotate(-20deg); filter: blur(100px)">
-                                    <div class="row z-index-9 position-relative align-items-center">
-                                        <div class="col-xl-8 col-lg-6 md-mb-30px">
-                                            <img src="assets/images/demo-modern-business-04.webp">
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 pt-6 pb-6 xl-py-0">
-                                            <div class="icon-with-text-style-08 mb-20px">
-                                                <div class="feature-box feature-box-left-icon-middle">
-                                                    <div
-                                                        class="feature-box-icon feature-box-icon-rounded w-50px h-50px bg-white box-shadow-bottom border-radius-100px me-10px">
-                                                        <i class="bi bi-megaphone fs-22 text-base-color"></i>
-                                                    </div>
-                                                    <div class="feature-box-content">
-                                                        <span
-                                                            class="d-inline-block fs-16 fw-500 text-dark-gray">Outstanding
-                                                            speed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2 class="ls-minus-1px text-dark-gray fw-700 mb-20px">Excellence framework.
-                                            </h2>
-                                            <p>Our excellence framework is a strategic approach that ensures quality and
-                                                continuous improvement across all operations.</p>
-                                            <a href="demo-modern-business-services.html"
-                                                class="btn btn-large btn-dark-gray btn-switch-text btn-box-shadow btn-rounded text-transform-none left-icon">
-                                                <span>
-                                                    <span><i class="feather icon-feather-edit"></i></span>
-                                                    <span class="btn-double-text" data-text="Start exploring">Start
-                                                        exploring</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stack-item mb-50px" data-index="2">
-                                <div class="stack-card-item p-70px xl-p-50px sm-p-30px cover-background"
-                                    style="background-image: url('assets/images/demo-modern-business-gradient-bg-01.jpg')">
-                                    <img src="assets/images/demo-modern-business-bg-01.webp" alt=""
-                                        class="position-absolute z-index-1 left-0px top-0px h-100 d-none d-lg-block"
-                                        data-bottom-top="transform:rotate(0deg); filter: blur(0px)"
-                                        data-top-bottom="transform:rotate(-20deg); filter: blur(100px)">
-                                    <div class="row z-index-9 position-relative align-items-center">
-                                        <div class="col-xl-8 col-lg-6 md-mb-30px">
-                                            <img src="assets/images/demo-modern-business-04.webp">
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 pt-6 pb-6 xl-py-0">
-                                            <div class="icon-with-text-style-08 mb-20px">
-                                                <div class="feature-box feature-box-left-icon-middle">
-                                                    <div
-                                                        class="feature-box-icon feature-box-icon-rounded w-50px h-50px bg-white box-shadow-bottom border-radius-100px me-10px">
-                                                        <i class="bi bi-megaphone fs-22 text-base-color"></i>
-                                                    </div>
-                                                    <div class="feature-box-content">
-                                                        <span
-                                                            class="d-inline-block fs-16 fw-500 text-dark-gray">Outstanding
-                                                            speed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2 class="ls-minus-1px text-dark-gray fw-700 mb-20px">Excellence framework.
-                                            </h2>
-                                            <p>Our excellence framework is a strategic approach that ensures quality and
-                                                continuous improvement across all operations.</p>
-                                            <a href="demo-modern-business-services.html"
-                                                class="btn btn-large btn-dark-gray btn-switch-text btn-box-shadow btn-rounded text-transform-none left-icon">
-                                                <span>
-                                                    <span><i class="feather icon-feather-edit"></i></span>
-                                                    <span class="btn-double-text" data-text="Start exploring">Start
-                                                        exploring</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stack-item mb-50px" data-index="3">
-                                <div class="stack-card-item p-70px xl-p-50px sm-p-30px cover-background"
-                                    style="background-image: url('assets/images/demo-modern-business-gradient-bg-01.jpg')">
-                                    <img src="assets/images/demo-modern-business-bg-01.webp" alt=""
-                                        class="position-absolute z-index-1 left-0px top-0px h-100 d-none d-lg-block"
-                                        data-bottom-top="transform:rotate(0deg); filter: blur(0px)"
-                                        data-top-bottom="transform:rotate(-20deg); filter: blur(100px)">
-                                    <div class="row z-index-9 position-relative align-items-center">
-                                        <div class="col-xl-8 col-lg-6 md-mb-30px">
-                                            <img src="assets/images/demo-modern-business-04.webp">
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 pt-6 pb-6 xl-py-0">
-                                            <div class="icon-with-text-style-08 mb-20px">
-                                                <div class="feature-box feature-box-left-icon-middle">
-                                                    <div
-                                                        class="feature-box-icon feature-box-icon-rounded w-50px h-50px bg-white box-shadow-bottom border-radius-100px me-10px">
-                                                        <i class="bi bi-megaphone fs-22 text-base-color"></i>
-                                                    </div>
-                                                    <div class="feature-box-content">
-                                                        <span
-                                                            class="d-inline-block fs-16 fw-500 text-dark-gray">Outstanding
-                                                            speed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2 class="ls-minus-1px text-dark-gray fw-700 mb-20px">Excellence framework.
-                                            </h2>
-                                            <p>Our excellence framework is a strategic approach that ensures quality and
-                                                continuous improvement across all operations.</p>
-                                            <a href="demo-modern-business-services.html"
-                                                class="btn btn-large btn-dark-gray btn-switch-text btn-box-shadow btn-rounded text-transform-none left-icon">
-                                                <span>
-                                                    <span><i class="feather icon-feather-edit"></i></span>
-                                                    <span class="btn-double-text" data-text="Start exploring">Start
-                                                        exploring</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stack-item mb-50px" data-index="4">
-                                <div class="stack-card-item p-70px xl-p-50px sm-p-30px cover-background"
-                                    style="background-image: url('assets/images/demo-modern-business-gradient-bg-01.jpg')">
-                                    <img src="assets/images/demo-modern-business-bg-01.webp" alt=""
-                                        class="position-absolute z-index-1 left-0px top-0px h-100 d-none d-lg-block"
-                                        data-bottom-top="transform:rotate(0deg); filter: blur(0px)"
-                                        data-top-bottom="transform:rotate(-20deg); filter: blur(100px)">
-                                    <div class="row z-index-9 position-relative align-items-center">
-                                        <div class="col-xl-8 col-lg-6 md-mb-30px">
-                                            <img src="assets/images/demo-modern-business-04.webp">
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 pt-6 pb-6 xl-py-0">
-                                            <div class="icon-with-text-style-08 mb-20px">
-                                                <div class="feature-box feature-box-left-icon-middle">
-                                                    <div
-                                                        class="feature-box-icon feature-box-icon-rounded w-50px h-50px bg-white box-shadow-bottom border-radius-100px me-10px">
-                                                        <i class="bi bi-megaphone fs-22 text-base-color"></i>
-                                                    </div>
-                                                    <div class="feature-box-content">
-                                                        <span
-                                                            class="d-inline-block fs-16 fw-500 text-dark-gray">Outstanding
-                                                            speed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2 class="ls-minus-1px text-dark-gray fw-700 mb-20px">Excellence framework.
-                                            </h2>
-                                            <p>Our excellence framework is a strategic approach that ensures quality and
-                                                continuous improvement across all operations.</p>
-                                            <a href="demo-modern-business-services.html"
-                                                class="btn btn-large btn-dark-gray btn-switch-text btn-box-shadow btn-rounded text-transform-none left-icon">
-                                                <span>
-                                                    <span><i class="feather icon-feather-edit"></i></span>
-                                                    <span class="btn-double-text" data-text="Start exploring">Start
-                                                        exploring</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="stack-item" data-index="5">
-                                <div class="stack-card-item p-70px xl-p-50px sm-p-30px cover-background"
-                                    style="background-image: url('assets/images/demo-modern-business-gradient-bg-01.jpg')">
-                                    <img src="assets/images/demo-modern-business-bg-01.webp" alt=""
-                                        class="position-absolute z-index-1 left-0px top-0px h-100 d-none d-lg-block"
-                                        data-bottom-top="transform:rotate(0deg); filter: blur(0px)"
-                                        data-top-bottom="transform:rotate(-20deg); filter: blur(100px)">
-                                    <div class="row z-index-9 position-relative align-items-center">
-                                        <div class="col-xl-8 col-lg-6 md-mb-30px">
-                                            <img src="assets/images/demo-modern-business-04.webp">
-                                        </div>
-                                        <div class="col-xl-4 col-lg-6 pt-6 pb-6 xl-py-0">
-                                            <div class="icon-with-text-style-08 mb-20px">
-                                                <div class="feature-box feature-box-left-icon-middle">
-                                                    <div
-                                                        class="feature-box-icon feature-box-icon-rounded w-50px h-50px bg-white box-shadow-bottom border-radius-100px me-10px">
-                                                        <i class="bi bi-megaphone fs-22 text-base-color"></i>
-                                                    </div>
-                                                    <div class="feature-box-content">
-                                                        <span
-                                                            class="d-inline-block fs-16 fw-500 text-dark-gray">Outstanding
-                                                            speed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2 class="ls-minus-1px text-dark-gray fw-700 mb-20px">Excellence framework.
-                                            </h2>
-                                            <p>Our excellence framework is a strategic approach that ensures quality and
-                                                continuous improvement across all operations.</p>
-                                            <a href="demo-modern-business-services.html"
-                                                class="btn btn-large btn-dark-gray btn-switch-text btn-box-shadow btn-rounded text-transform-none left-icon">
-                                                <span>
-                                                    <span><i class="feather icon-feather-edit"></i></span>
-                                                    <span class="btn-double-text" data-text="Start exploring">Start
-                                                        exploring</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end stack card -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end section -->
-
         <!--QR Verification  start section -->
         <section class="position-relative bg-spring-wood">
             <img src="assets/images/demo-modern-business-elements-05.webp" alt=""
@@ -855,102 +690,176 @@
         </section>
         <!--QR Verification  end section -->
 
-
-        <!--steps start section -->
-        <section class="pt-90px">
+        <!-- features start -->
+        <section class="py-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 md-mb-50px">
-                        <div class="position-sticky top-50px"
-                            data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <div
-                                class="fs-11 lh-26 fw-500 text-uppercase text-white bg-base-color border-radius-30px ps-15px pe-15px mb-20px d-inline-block">
-                                Discover our process</div>
-                            <h2 class="fw-500 text-dark-gray mb-40px">How Its <span class="highlight-separator pb-0"
-                                    data-shadow-animation="true" data-animation-delay="1500">Works<span><img
-                                            src="assets/images/highlight-separator-11.svg" alt=""></span></span></h2>
-                            <p> Experience a smarter way to manage your training institute. Our end-to-end platform
-                                streamlines every workflow—from branch setup and course management to online exams and
-                                QR-verified certificates—helping you save time, reduce manual effort, and focus on
-                                delivering exceptional education.</p>
+                <div class="row g-4">
+                    <!-- Left -->
+                    <div class="col-lg-3">
+                        <div class="glass-card mb-4">
+                            <small class="text-uppercase text-primary fw-bold">Content Formats</small>
+                            <h3 class="mt-3">6 formats.<br>One workflow.</h3>
+                            <p class="text-secondary">
+                                From quick explainers to full learning pathways.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-secondary">Basic Video</span>
+                                <span class="badge bg-secondary">Advanced</span>
+                                <span class="badge bg-secondary">Talking Head</span>
+                                <span class="badge bg-secondary">MCQ</span>
+                                <span class="badge bg-secondary">Simulation</span>
+                                <span class="badge bg-secondary">Game</span>
+                            </div>
+                        </div>
+                        <div class="glass-card">
+                            <small class="text-uppercase text-primary fw-bold">
+                                AI + HUMAN
+                            </small>
+                            <h4 class="mt-3">
+                                100% Human in the Loop
+                            </h4>
+                            <ul class="list-unstyled mt-4">
+                                <li class="mb-3">
+                                    ✔ Extract & Structure
+                                </li>
+                                <li class="mb-3">
+                                    ✔ Review & Refine
+                                </li>
+                                <li class="mb-3">
+                                    ✔ Generate Content
+                                </li>
+                                <li>
+                                    ✔ Publish
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Center -->
+                    <div class="col-lg-6">
+                        <div class="glass-card position-relative center-card">
+                            <h2 class="text-center fw-bold">
+                                AGENTIC AI PURPOSE-BUILT
+                            </h2>
+                            <div class="text-center my-4">
+                                <button class="btn btn-outline-light btn-sm">
+                                    Document
+                                </button>
+                                <button class="btn btn-outline-light btn-sm">
+                                    SCORM
+                                </button>
+                                <button class="btn btn-outline-light btn-sm">
+                                    LMS
+                                </button>
+                            </div>
+                            <div class="robot-circle">
+                                <img src="assets/images/robot.png" class="img-fluid">
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-6">
+                                    <h5>Production Speed</h5>
+                                    <h1 class="display-4 fw-bold text-primary">
+                                        4X
+                                    </h1>
+                                    <p>
+                                        Faster than traditional production.
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>What's Coming</h5>
+                                    <ul>
+                                        <li>Sales Coach</li>
+                                        <li>Assessment</li>
+                                        <li>AI Support</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 offset-lg-1 pe-70px lg-pe-15px">
-                        <div
-                            class="feature-box feature-box-left-icon last-paragraph-no-margin border-bottom border-color-extra-medium-gray pb-40px mb-40px">
-                            <div class="feature-box-icon">
-                                <img src="images/demo-branding-studio-services-icon-01.svg" alt="">
+
+                    <!-- Right -->
+                    <div class="col-lg-3">
+                        <div class="glass-card mb-4">
+                            <small class="text-uppercase text-primary fw-bold">
+                                Learning Depth
+                            </small>
+                            <h4 class="mt-3">
+                                Structured Learning
+                            </h4>
+                            <div class="mt-4">
+                                <p>3-5 min</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" style="width:30%"></div>
+                                </div>
                             </div>
-                            <div class="feature-box-content">
-                                <span class="fs-20 fw-500 d-inline-block text-dark-gray mb-5px">Configure
-                                    Branches</span>
-                                <p class="w-90 lg-w-100">We dive deep into market insights to shape effective strategies
-                                    tailored to your goals. We develop strategies that drive real results.</p>
+                            <div class="mt-3">
+                                <p>5-20 min</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width:70%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div
-                            class="feature-box feature-box-left-icon last-paragraph-no-margin border-bottom border-color-extra-medium-gray pb-40px mb-40px">
-                            <div class="feature-box-icon">
-                                <img src="images/demo-branding-studio-services-icon-02.svg" alt="">
-                            </div>
-                            <div class="feature-box-content">
-                                <span class="fs-20 fw-500 d-inline-block text-dark-gray mb-5px">Upload Courses</span>
-                                <p class="w-90 lg-w-100">Wireframes map the user journey and layout before development
-                                    begins. Our wireframes bring your ideas to life with structured clarity.</p>
-                            </div>
-                        </div>
-                        <div
-                            class="feature-box feature-box-left-icon last-paragraph-no-margin border-bottom border-color-extra-medium-gray pb-40px mb-40px">
-                            <div class="feature-box-icon">
-                                <img src="images/demo-branding-studio-services-icon-03.svg" alt="">
-                            </div>
-                            <div class="feature-box-content">
-                                <span class="fs-20 fw-500 d-inline-block text-dark-gray mb-5px">Conduct Exams</span>
-                                <p class="w-90 lg-w-100">We build robust digital solutions designed to scale with your
-                                    business. Smart development paired with scalability for long-term success.</p>
+                            <div class="mt-3">
+                                <p>20+ min</p>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width:100%"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
-                            <div class="feature-box-icon">
-                                <img src="images/demo-branding-studio-services-icon-04.svg" alt="">
-                            </div>
-                            <div class="feature-box-content">
-                                <span class="fs-20 fw-500 d-inline-block text-dark-gray mb-5px">Issue
-                                    Certificates</span>
-                                <p class="w-90 lg-w-100">We ensure a smooth launch and a successful go-live experience.
-                                    Seamless launch support to help you go live with confidence.</p>
-                            </div>
+                        <div class="glass-card">
+                            <small class="text-uppercase text-primary fw-bold">
+                                Deployment
+                            </small>
+                            <ul class="list-group mt-4">
+                                <li class="list-group-item bg-transparent text-white">
+                                    SCORM ✔
+                                </li>
+                                <li class="list-group-item bg-transparent text-white">
+                                    xAPI ✔
+                                </li>
+                                <li class="list-group-item bg-transparent text-white">
+                                    Mobile ✔
+                                </li>
+                                <li class="list-group-item bg-transparent text-white">
+                                    LMS ✔
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--steps end section -->
-
-        <!-- start section -->
+        <!-- feature end -->
+         
+        <!--CTA start section -->
         <section
             class="pt-25px pb-25px bg-dark-gray ps-65px pe-65px sm-pe-0 sm-ps-0 lg-pe-15px xxl-pe-45px md-pt-10px md-pb-10px position-relative">
 
             <div class="container-fluid">
-                <div class="row justify-content-start">
-                    <div class="col-md-6 col-lg-8 col-xxl-8">
-                        <span class="fs-70 md-fs-70 lg-fs-70 xl-fs-90 fw-500 d-block mb-40px">Let's make something
-                            beautiful together?</span>
+                <div class="row align-items-center">
 
+                    <!-- Left Content -->
+                    <div class="col-lg-8">
+                        <span class="fs-70 md-fs-70 lg-fs-70 xl-fs-90 fw-500 d-block">
+                            Let's make something beautiful together?
+                        </span>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="col btn-dual">
-                            <a href="#"
-                                class="btn btn-extra-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow d-table d-lg-inline-block lg-mb-15px md-mx-auto">Border
-                                dark gray<span class="bg-dark-gray text-white"><i
-                                        class="fa-solid fa-arrow-right"></i></span></a>
 
-                        </div>
+                    <!-- Right Button -->
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center">
+                        <a href="#"
+                            class="btn btn-extra-large fw-600 btn-rounded with-rounded btn-white btn-box-shadow">
+                            Book Your Free Live Demo
+                            <span class="bg-dark-gray text-white">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </section>
-        <!-- end section -->
+        <!--CTA end section -->
 
         <!-- start FAQ section -->
         <section class="bg-spring-wood">
@@ -1069,27 +978,34 @@
 
 
         <!-- start section -->
-        <section class="big-section">
+        <section class="pt-90px pb-90px ">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-5 md-mb-50px">
-                        <img src="assets/images/demo-modern-business-03.webp" alt="" class="">
+                        <div class="position-relative">
 
-                        <div
-                            class="icon-with-text-style-01 feature-box feature-box-left-icon-middle bg-white p-25px border-radius-6px last-paragraph-no-margin w-95 md-w-100 text-start box-shadow-double-large">
-                            <div class="feature-box-icon me-15px">
-                                <span
-                                    class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
-                                    style="width:60px;height:60px;">
-                                    <i class="fas fa-phone-alt fs-4"></i>
-                                </span>
+                            <img src="assets/images/demo-modern-business-02.jpg" alt="" class="img-fluid">
+
+                            <div class="icon-with-text-style-01 feature-box feature-box-left-icon-middle bg-white p-25px border-radius-6px last-paragraph-no-margin text-start box-shadow-double-large position-absolute start-50 translate-middle-x"
+                                style="bottom:40px; width:90%; z-index:10;">
+
+                                <div class="feature-box-icon me-15px">
+                                    <span
+                                        class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                                        style="width:60px;height:60px;">
+                                        <i class="fas fa-phone-alt fs-4"></i>
+                                    </span>
+                                </div>
+
+                                <div class="feature-box-content">
+                                    <p class="lh-26 mb-0">Phone Appointment</p>
+                                    <a href="tel:+12345678910" class="fs-20 fw-600 text-dark-gray">
+                                        +1 234 567 8910
+                                    </a>
+                                </div>
+
                             </div>
-                            <div class="feature-box-content">
-                                <p class="lh-26 mb-0">Phone Appointment</p>
-                                <a href="tel:+12345678910" class="fs-20 fw-600 text-dark-gray">
-                                    +1 234 567 8910
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-7">
@@ -1183,8 +1099,7 @@
         class="footer-dark bg-dark-gray overflow-hidden ps-65px pe-65px xl-ps-45px xl-pe-45px lg-ps-15px lg-pe-15px sm-ps-0 sm-pe-0">
         <div class="container">
             <!-- start footer top -->
-            <div
-                class="footer-top border-bottom border-color-transparent-white-light pb-25px mb-25px md-pb-20px md-mb-20px">
+            <div class="footer-top border-color-transparent-white-light ">
                 <div class="row align-items-center">
                     <div class="col-lg-4 md-mb-20px text-center text-lg-start">
                         <div class="hover-arrow-swipe d-inline-grid align-items-center last-paragraph-no-margin">
@@ -1217,24 +1132,30 @@
                     </div>
                 </div>
             </div>
-
-            <!-- end footer top -->
-            <div class="row justify-content-center text-center text-lg-start ">
-                <!-- start footer column -->
-                <div class="col-lg-6 col-sm-6 md-mb-30px">
-                    <p class="md-mb-0">Take a moment to explore our portfolio for reference</p>
-                </div>
-                <!-- end footer column -->
-
-                <!-- start footer column -->
-                <div class="col-xl-6 col-lg-6 col-sm-12 last-paragraph-no-margin text-end">
-                    <p class="md-mb-0">© 2026 Marinex is Proudly Powered by <a href="https://www.saraswebtech.com/"
-                            target="_blank" class="text-white text-decoration-line-bottom">Saras Webtech </a></p>
-                </div>
-                <!-- end footer column -->
-            </div>
         </div>
     </footer>
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Column -->
+            <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start">
+                <p class="mb-0 pb-10px pt-10px">
+                    Take a moment to explore our portfolio for reference
+                </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end">
+                <p class="mb-0">
+                    © 2026 Marinex is Proudly Powered by
+                    <a href="https://www.saraswebtech.com/" target="_blank" class="text-decoration-line-bottom">
+                        Saras Webtech
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
     <!-- end footer -->
 
     <!-- Whatsapp chat start here -->
