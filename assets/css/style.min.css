@@ -4014,7 +4014,7 @@ textarea:focus {
 
 .bg-spring-wood {
     background-color: var(--spring-wood);
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .bg-tropical-blue {
@@ -11110,7 +11110,7 @@ header.sticky .left-sidebar-nav .navbar-nav .nav-link {
 .show-search-popup .search-form-wrapper {
     opacity: 1;
     visibility: visible;
-    cursor: url(../images/mfg-close.png), auto
+    cursor: url(../images/mfg-close.webp), auto
 }
 
 .show-search-popup .search-form-wrapper .search-form {
@@ -15870,7 +15870,7 @@ blockquote footer {
 }
 
 .mfp-wrap {
-    cursor: url(../images/mfg-close.png), auto
+    cursor: url(../images/mfg-close.webp), auto
 }
 
 .mfp-wrap .mfp-container {

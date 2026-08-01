@@ -109,7 +109,7 @@
     .wcs_fixed_left{
         z-index: 999;
         position: fixed;
-        bottom: 20px;
+        bottom: 90px;
         left: 20px;
     }
     .wcs_fixed_left .wcs_popup{
