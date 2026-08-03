@@ -554,6 +554,7 @@
                     src: '#subscribe-popup'
                 },
                 type: 'inline',
+                showCloseBtn: false,
                 mainClass: 'my-mfp-zoom-in'
             });
         }
