@@ -25,75 +25,6 @@
 
     <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
     <style>
-        .glass-card {
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #433d74;
-            border-radius: 25px;
-            padding: 30px;
-        }
-
-        .icon-2 {
-            position: absolute;
-            right: -20px;
-            bottom: -20px;
-            font-size: 90px;
-            opacity: 0.12;
-            color: var(--dark-gray);
-            transform: rotate(-25deg);
-            pointer-events: none;
-            transition: 0.3s;
-        }
-
-        .glass-card:hover .icon-2 {
-            opacity: 0.2;
-            transform: rotate(-20deg) scale(1.05);
-        }
-
-        .center-card {
-            min-height: 450px;
-        }
-
-        @media(max-width:991px) {
-
-            .center-card {
-                min-height: auto;
-            }
-        }
-
-        .vector-bg {
-            position: relative;
-            min-height: 450px;
-            border-radius: 25px;
-            overflow: hidden;
-            border: 1px solid #433d74;
-        }
-
-        .bg-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 30px;
-            color: #fff;
-            top: 350px;
-        }
-
-        .vector-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, .45);
-            z-index: 1;
-        }
-
         .bg-cosmic-latte-white {
             background-color: #F2FBF9;
         }
@@ -104,10 +35,6 @@
 
         .bg-lavender-violet {
             background-color: #F5EDFC;
-        }
-
-        .bg-purple {
-            background: #6743df;
         }
 
         /* Subscribe popup fixes */
@@ -138,6 +65,495 @@
             height: auto !important;
             width: auto !important;
             margin-top: 10px;
+        }
+
+        .feature-card,
+        .hero-card {
+            background: linear-gradient(180deg, #0c1738, #081128);
+            border: 1px solid rgba(108, 132, 255, .35);
+            border-radius: 28px;
+            padding: 27px;
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, .45),
+                inset 0 1px rgba(255, 255, 255, .05);
+        }
+
+        .feature-card:hover,
+        .hero-card:hover {
+            transform: translateY(-8px);
+            border-color: #5d6bff;
+            box-shadow:
+                0 35px 70px rgba(0, 0, 0, .55),
+                0 0 30px rgba(91, 124, 255, .20);
+
+        }
+
+        /*=========================
+    Icon Box
+==========================*/
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .30);
+        }
+
+        .bg-purple {
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+        }
+
+        .bg-green {
+            background: linear-gradient(135deg, #00d084, #00b894);
+        }
+
+        .bg-orange {
+            background: linear-gradient(135deg, #ff9f43, #ff6b35);
+        }
+
+        .bg-cyan {
+            background: linear-gradient(135deg, #00d2ff, #0097e6);
+        }
+
+        .card-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #7b8cff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .green {
+            color: #00e39b;
+        }
+
+        .orange {
+            color: #ffb347;
+        }
+
+        .cyan {
+            color: #00d9ff;
+        }
+
+        .feature-card p {
+            color: #a8b3d3;
+        }
+
+        /*=========================
+    List
+==========================*/
+
+        .feature-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: #edf2ff;
+        }
+
+        .feature-list i {
+            color: #6d8cff;
+        }
+
+        /*=========================
+    Hero
+==========================*/
+
+        .hero-card {
+            min-height: 100%;
+        }
+
+        .hero-card h4 span {
+            background: linear-gradient(90deg, #ff3fd8, #4da6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-card p {
+            color: #c4cce8;
+        }
+
+        /*=========================
+    Circle
+==========================*/
+
+        .circle-wrapper {
+            width: 380px;
+            height: 380px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .circle-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(135deg, #ff27d0, #2b9dff);
+        }
+
+        .circle-ring::before {
+            content: "";
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            background: #081128;
+        }
+
+        .center-image {
+            position: absolute;
+            inset: 65px;
+            border-radius: 50%;
+            background: #101d45;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .center-image img {
+            width: 75%;
+        }
+
+        /*=========================
+    Floating Icons
+==========================*/
+
+        .floating-icon {
+
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #0f204e;
+            border: 2px solid #4fa4ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            color: #fff;
+            z-index: 3;
+        }
+
+        .icon1 {
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .icon2 {
+            left: -20px;
+            top: 45%;
+        }
+
+        .icon3 {
+            bottom: 15px;
+            left: 40px;
+        }
+
+        .icon4 {
+            bottom: 30px;
+            right: 25px;
+        }
+
+        .icon5 {
+            right: -15px;
+            top: 45%;
+        }
+
+        /*=========================
+    Footer
+==========================*/
+
+        .hero-footer {
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 22px;
+            padding: 17px;
+        }
+
+
+        .feature-icons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .feature-icons div {
+            text-align: center;
+        }
+
+        .feature-icons i {
+            font-size: 28px;
+            color: #7ca5ff;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /*=========================
+    Responsive
+==========================*/
+
+        @media(max-width:1200px) {
+
+            .circle-wrapper {
+                width: 360px;
+                height: 360px;
+            }
+        }
+
+        @media(max-width:991px) {
+
+
+            .circle-wrapper {
+                width: 320px;
+                height: 320px;
+                margin: 50px auto;
+            }
+
+            .feature-card {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media(max-width:767px) {
+
+
+            .circle-wrapper {
+                width: 260px;
+                height: 260px;
+            }
+
+            .center-image {
+                inset: 45px;
+            }
+
+            .floating-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+            }
+
+            .hero-footer {
+                text-align: center;
+            }
+
+            .feature-icons {
+                justify-content: center;
+            }
+        }
+
+
+        /*================================
+        Glow Ring
+================================*/
+
+        .circle-ring {
+            animation: ringRotate 12s linear infinite;
+            box-shadow:
+                0 0 20px #4d7cff,
+                0 0 60px rgba(77, 124, 255, .4),
+                0 0 100px rgba(77, 124, 255, .15);
+        }
+
+        @keyframes ringRotate {
+
+            from {
+                transform: rotate(0deg);
+
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /*================================
+      Center Circle Pulse
+================================*/
+
+        .center-image {
+            animation: pulseGlow 4s ease-in-out infinite;
+            box-shadow:
+                0 0 25px rgba(91, 124, 255, .30);
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+                box-shadow:
+                    0 0 45px rgba(91, 124, 255, .55);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /*================================
+     Floating Icons
+================================*/
+
+        .floating-icon {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .icon1 {
+            animation-delay: 0s;
+        }
+
+        .icon2 {
+            animation-delay: .5s;
+        }
+
+        .icon3 {
+            animation-delay: 1s;
+        }
+
+        .icon4 {
+            animation-delay: 1.5s;
+        }
+
+        .icon5 {
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0% {
+
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /*================================
+     Card Hover
+================================*/
+        .feature-card {
+            transition: .45s;
+        }
+
+        .feature-card:hover {
+            transform:
+                translateY(-10px) scale(1.02);
+        }
+
+        .feature-card:hover .icon-box {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
+        .icon-box {
+            transition: .45s;
+        }
+
+        /*================================
+      Button Hover
+================================*/
+        .btn-primary {
+            transition: .35s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 12px 30px rgba(91, 124, 255, .35);
+        }
+
+        /*================================
+      Feature Icons
+================================*/
+        .feature-icons div {
+            transition: .35s;
+            cursor: pointer;
+        }
+
+        .feature-icons div:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-icons i {
+            transition: .35s;
+        }
+
+        .feature-icons div:hover i {
+            color: #00d8ff;
+            transform: scale(1.2);
+        }
+
+        /*================================
+      Lists
+================================*/
+        .feature-list li {
+            transition: .35s;
+        }
+
+        .feature-list li:hover {
+            padding-left: 8px;
+            color: #fff;
+        }
+
+        .feature-list li:hover i {
+            color: #00d8ff;
+        }
+
+        /*================================
+      Hero Animation
+================================*/
+        .hero-top {
+            animation: fadeUp .9s ease;
+        }
+
+        .hero-footer {
+            animation: fadeUp 1.3s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /*================================
+    Smooth Image Zoom
+===============================*/
+        .center-image img {
+            transition: .5s;
+        }
+
+        .hero-card:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -410,6 +826,214 @@
         </section>
         <!--Multi-Level Access end section -->
 
+        <!-- Feature Cards -->
+        <section class="text-white "
+            style="background: radial-gradient(circle at top, #102056 0%, #050b23 45%, #020616 100%); border-radius: 10px;">
+            <div class="container-fluid px-3 px-lg-5 ">
+                <div class="row g-4">
+
+                    <!-- LEFT SIDE -->
+                    <div class="col-lg-3">
+
+                        <!-- Card 1 -->
+                        <div class="feature-card mb-4">
+                            <div class="icon-box bg-purple">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <span class="card-label">
+                                MULTI-BRANCH MANAGEMENT
+                            </span>
+                            <h6 class="fs-20 fw-400 mb-10px">
+                                Unlimited
+                                Branches
+                            </h6>
+                            <p class="fs-16 mb-10px">
+                                Super Admin can effortlessly create multiple branches and assign dedicated Admins.
+                            </p>
+                            <ul class="feature-list">
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Create Branches</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Assign Admins</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Permissions</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Central Control</li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Card 2 -->
+
+                        <div class="feature-card">
+                            <div class="icon-box bg-green">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <span class="card-label green">
+                                STUDENT & COURSE MANAGEMENT
+                            </span>
+                            <h6 class="fs-20 fw-400 mb-10px">
+                                Complete Student
+                                Lifecycle
+                            </h6>
+                            <p class="fs-16 mb-10px">
+                                Branch Admins can add courses, create batches, and enroll students seamlessly.
+                            </p>
+                            <ul class="feature-list">
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Registration</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Course Management</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Batch Allocation</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-circle-check"></i>Attendance</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CENTER -->
+                    <div class="col-lg-6">
+                        <div class="hero-card">
+                            <div class="hero-top text-center">
+                                <h4>
+                                    TRAINING INSTITUTE<br>
+                                    <span>MANAGEMENT</span> SOFTWARE
+                                </h4>
+                                <p class="fs-16 mb-10px">
+                                    One Platform. Complete Institute Management.
+                                </p>
+                            </div>
+                            <!-- Animated Circle -->
+
+                            <div class="circle-wrapper">
+
+                                <div class="circle-ring"></div>
+
+                                <div class="center-image">
+                                    <img src="assets/images/desktop.png" class="img-fluid">
+                                </div>
+
+                                <div class="floating-icon icon1">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+
+                                <div class="floating-icon icon2">
+                                    <i class="fa-solid fa-user-graduate"></i>
+                                </div>
+
+                                <div class="floating-icon icon3">
+                                    <i class="fa-solid fa-file-circle-check"></i>
+                                </div>
+
+                                <div class="floating-icon icon4">
+                                    <i class="fa-solid fa-qrcode"></i>
+                                </div>
+
+                                <div class="floating-icon icon5">
+                                    <i class="fa-solid fa-file-pen"></i>
+                                </div>
+
+                            </div>
+
+                            <!-- Bottom -->
+
+                            <div class="hero-footer">
+
+                                <div class="row align-items-center">
+
+
+                                    <div class="col-md-12">
+
+                                        <h6 class="fs-20 mb-10px fw-500">Everything You Need</h6>
+
+                                        <div class="feature-icons">
+
+                                            <div>
+                                                <i class="fa-solid fa-building"></i>
+                                                <span>Branches</span>
+                                            </div>
+
+                                            <div>
+                                                <i class="fa-solid fa-users"></i>
+                                                <span>Students</span>
+                                            </div>
+
+                                            <div>
+                                                <i class="fa-solid fa-file-lines"></i>
+                                                <span>Exams</span>
+                                            </div>
+
+                                            <div>
+                                                <i class="fa-solid fa-award"></i>
+                                                <span>Certificates</span>
+                                            </div>
+
+                                            <div>
+                                                <i class="fa-solid fa-qrcode"></i>
+                                                <span>QR Verify</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT -->
+                    <div class="col-lg-3">
+
+                        <div class="feature-card mb-lg-4">
+                            <div class="icon-box bg-orange">
+                                <i class="fa-solid fa-file-pen"></i>
+                            </div>
+                            <span class="card-label orange">
+                                ONLINE EXAMS ALLOCATION
+                            </span>
+                            <h6 class="fs-20 fw-400 mb-10px">
+                                Smart Exam
+                                System
+                            </h6>
+                            <p class="fs-16 mb-10px">
+                                Branch Admins can add courses, create batches, and enroll students seamlessly.
+                            </p>
+                            <ul class="feature-list">
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-clock"></i>Automatic Allocation</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-user"></i>Manual Assignment</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-bolt"></i>Instant Results</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-chart-column"></i>Reports</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="icon-box bg-cyan">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <span class="card-label cyan text-uppercase">
+                                Automated Certificate Generation
+                            </span>
+                            <h6 class="fs-20 fw-400 mb-10px">
+                                Secure QR
+                                Verification
+                            </h6>
+                            <p class="fs-16 mb-10px">
+                                Anyone can scan it to instantly
+                                verify student credentials online.
+                            </p>
+                            <ul class="feature-list">
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-certificate"></i>One Click Certificate
+                                </li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-qrcode"></i>QR Validation</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-shield"></i>Anti Fraud</li>
+                                <li class="fs-14 fw-300"><i class="fa-solid fa-globe"></i>Online Verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Feature Cards -->
+
         <!--QR Verification  start section -->
         <section class="position-relative ">
             <img src="assets/images/demo-modern-business-elements-05.webp" alt=""
@@ -502,7 +1126,7 @@
         <!--QR Verification  end section -->
 
         <!--Why  start section -->
-        <section class="cover-background pt-5 xs-pt-8 " style="background-color:#160833;">
+        <section class="cover-background pt-5 xs-pt-8 bg-spring-wood">
             <div class="container">
                 <div class="row justify-content-center mb-3">
                     <div class="col-lg-8 text-center"
@@ -623,8 +1247,8 @@
 
         <!--how its work start section -->
         <section
-            class="overlap-height background-no-repeat background-position-left-top cover-background position-relative"
-            style="background-image: url('assets/images/demo-it-business-about-bg2.webp')">
+            class="overlap-height background-no-repeat background-position-left-top cover-background position-relative">
+            <!-- style="background-image: url('assets/images/demo-it-business-about-bg2.webp')"> -->
             <div class="container  overlap-gap-section">
                 <div class="row justify-content-center mb-3 sm-mb-8">
                     <div class="col-xl-5 col-lg-7 col-md-8 text-center last-paragraph-no-margin">
@@ -694,7 +1318,7 @@
         <!-- how its work end section -->
 
         <!--admin panel start section -->
-        <section class="pe-9 ps-9 xxl-pe-30px xxl-ps-30px">
+        <section class="pe-9 ps-9 xxl-pe-30px xxl-ps-30px ">
             <div class="pt-100px md-pt-70px sm-pt-50px border-radius-18px lg-no-border-radius">
                 <div class="container">
                     <div class="row overlap-section justify-content-center g-0 mb-8">
@@ -759,7 +1383,7 @@
         <!--admin panel end section -->
 
         <!--Faq start section -->
-        <section class="big-section bg-spring-wood">
+        <section class="big-section ">
             <div class="container">
                 <div class="row">
                     <div class="col-xxl-4 col-lg-5 position-relative md-mb-25px"
