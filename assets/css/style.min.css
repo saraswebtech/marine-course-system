@@ -3892,7 +3892,7 @@ textarea:focus {
 }
 
 .bg-base-color {
-    background-color: var(--base-color)
+    background-color:#ede7fb;
 }
 
 .bg-dark-gray,
