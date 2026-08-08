@@ -536,6 +536,24 @@
         }
     });
 
+    // Smooth scroll on menu click
+    $('.nav-item > .nav-link').on('click', function (e) {
+        var href = $(this).attr('href');
+        if (href && href.indexOf('#') === 0 && href.length > 1) {
+            var target = $(href);
+            if (target.length) {
+                e.preventDefault();
+                var headerHeight = $('.header-with-topbar').outerHeight() || 0;
+                $('html, body').animate({
+                    scrollTop: target.offset().top - headerHeight
+                }, 800, 'swing');
+                if ($('.navbar-collapse').hasClass('show')) {
+                    $('.navbar-toggler').trigger('click');
+                }
+            }
+        }
+    });
+
     $(window).resize(function () {
         if ($(window).width() > 991) {
             $('.navbar-nav').find('.dropdown-menu').removeClass('show');
