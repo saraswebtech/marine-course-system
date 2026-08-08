@@ -1396,8 +1396,8 @@ h3{
 }
 
 h6{
-     font-size: 25px;
-    line-height: 25px;
+     font-size: 20px;
+    line-height: 22px;
 }
     .sm-fs-0 {
         font-size: 0
@@ -27267,7 +27267,7 @@ h6{
     }
 
     .btn.btn-extra-large {
-        font-size: 15px;
+        font-size: 13px;
         padding: 20px 40px
     }
 
@@ -27277,7 +27277,7 @@ h6{
     }
 
     .btn.btn-rounded.btn-extra-large {
-        padding: 16px 36px
+        padding: 10px 20px
     }
 
     .btn.btn-rounded.btn-large {
